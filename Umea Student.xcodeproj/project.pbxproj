@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55247650159E74CC00084226 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5524764F159E74CC00084226 /* UIKit.framework */; };
+		55247652159E74CC00084226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247651159E74CC00084226 /* Foundation.framework */; };
+		55247654159E74CC00084226 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247653159E74CC00084226 /* CoreGraphics.framework */; };
+		55247656159E74CC00084226 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247655159E74CC00084226 /* CoreData.framework */; };
+		5524765C159E74CC00084226 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5524765A159E74CC00084226 /* InfoPlist.strings */; };
+		5524765E159E74CC00084226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524765D159E74CC00084226 /* main.m */; };
+		55247662159E74CC00084226 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55247661159E74CC00084226 /* AppDelegate.m */; };
+		55247665159E74CC00084226 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55247663159E74CC00084226 /* Umea_Student.xcdatamodeld */; };
+		5524766D159E74CC00084226 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5524766C159E74CC00084226 /* SenTestingKit.framework */; };
+		5524766E159E74CC00084226 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5524764F159E74CC00084226 /* UIKit.framework */; };
+		5524766F159E74CC00084226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247651159E74CC00084226 /* Foundation.framework */; };
+		55247670159E74CC00084226 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247655159E74CC00084226 /* CoreData.framework */; };
+		55247678159E74CD00084226 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55247676159E74CD00084226 /* InfoPlist.strings */; };
+		5524767B159E74CD00084226 /* Umea_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524767A159E74CD00084226 /* Umea_StudentTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55247671159E74CD00084226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55247642159E74CC00084226 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5524764A159E74CC00084226;
+			remoteInfo = "Umea Student";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5524764B159E74CC00084226 /* Umea Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Umea Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5524764F159E74CC00084226 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55247651159E74CC00084226 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55247653159E74CC00084226 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55247655159E74CC00084226 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		55247659159E74CC00084226 /* Umea Student-Info.plist */ = {isa = PBXFileReference; path = "Umea Student-Info.plist"; sourceTree = "<group>"; };
+		5524765B159E74CC00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5524765D159E74CC00084226 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5524765F159E74CC00084226 /* Umea Student-Prefix.pch */ = {isa = PBXFileReference; path = "Umea Student-Prefix.pch"; sourceTree = "<group>"; };
+		55247660159E74CC00084226 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		55247661159E74CC00084226 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55247664159E74CC00084226 /* Umea_Student.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Umea_Student.xcdatamodel; sourceTree = "<group>"; };
+		5524766B159E74CC00084226 /* Umea StudentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Umea StudentTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5524766C159E74CC00084226 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		55247675159E74CD00084226 /* Umea StudentTests-Info.plist */ = {isa = PBXFileReference; path = "Umea StudentTests-Info.plist"; sourceTree = "<group>"; };
+		55247677159E74CD00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55247679159E74CD00084226 /* Umea_StudentTests.h */ = {isa = PBXFileReference; path = Umea_StudentTests.h; sourceTree = "<group>"; };
+		5524767A159E74CD00084226 /* Umea_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Umea_StudentTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55247648159E74CC00084226 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55247650159E74CC00084226 /* UIKit.framework in Frameworks */,
+				55247652159E74CC00084226 /* Foundation.framework in Frameworks */,
+				55247654159E74CC00084226 /* CoreGraphics.framework in Frameworks */,
+				55247656159E74CC00084226 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55247667159E74CC00084226 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5524766D159E74CC00084226 /* SenTestingKit.framework in Frameworks */,
+				5524766E159E74CC00084226 /* UIKit.framework in Frameworks */,
+				5524766F159E74CC00084226 /* Foundation.framework in Frameworks */,
+				55247670159E74CC00084226 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55247640159E74CC00084226 = {
+			isa = PBXGroup;
+			children = (
+				55247657159E74CC00084226 /* Umea Student */,
+				55247673159E74CD00084226 /* Umea StudentTests */,
+				5524764E159E74CC00084226 /* Frameworks */,
+				5524764C159E74CC00084226 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5524764C159E74CC00084226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5524764B159E74CC00084226 /* Umea Student.app */,
+				5524766B159E74CC00084226 /* Umea StudentTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5524764E159E74CC00084226 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5524764F159E74CC00084226 /* UIKit.framework */,
+				55247651159E74CC00084226 /* Foundation.framework */,
+				55247653159E74CC00084226 /* CoreGraphics.framework */,
+				55247655159E74CC00084226 /* CoreData.framework */,
+				5524766C159E74CC00084226 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55247657159E74CC00084226 /* Umea Student */ = {
+			isa = PBXGroup;
+			children = (
+				55247660159E74CC00084226 /* AppDelegate.h */,
+				55247661159E74CC00084226 /* AppDelegate.m */,
+				55247663159E74CC00084226 /* Umea_Student.xcdatamodeld */,
+				55247658159E74CC00084226 /* Supporting Files */,
+			);
+			path = "Umea Student";
+			sourceTree = "<group>";
+		};
+		55247658159E74CC00084226 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55247659159E74CC00084226 /* Umea Student-Info.plist */,
+				5524765A159E74CC00084226 /* InfoPlist.strings */,
+				5524765D159E74CC00084226 /* main.m */,
+				5524765F159E74CC00084226 /* Umea Student-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55247673159E74CD00084226 /* Umea StudentTests */ = {
+			isa = PBXGroup;
+			children = (
+				55247679159E74CD00084226 /* Umea_StudentTests.h */,
+				5524767A159E74CD00084226 /* Umea_StudentTests.m */,
+				55247674159E74CD00084226 /* Supporting Files */,
+			);
+			path = "Umea StudentTests";
+			sourceTree = "<group>";
+		};
+		55247674159E74CD00084226 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55247675159E74CD00084226 /* Umea StudentTests-Info.plist */,
+				55247676159E74CD00084226 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5524764A159E74CC00084226 /* Umea Student */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5524767E159E74CD00084226 /* Build configuration list for PBXNativeTarget "Umea Student" */;
+			buildPhases = (
+				55247647159E74CC00084226 /* Sources */,
+				55247648159E74CC00084226 /* Frameworks */,
+				55247649159E74CC00084226 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Umea Student";
+			productName = "Umea Student";
+			productReference = 5524764B159E74CC00084226 /* Umea Student.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5524766A159E74CC00084226 /* Umea StudentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55247681159E74CD00084226 /* Build configuration list for PBXNativeTarget "Umea StudentTests" */;
+			buildPhases = (
+				55247666159E74CC00084226 /* Sources */,
+				55247667159E74CC00084226 /* Frameworks */,
+				55247668159E74CC00084226 /* Resources */,
+				55247669159E74CC00084226 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55247672159E74CD00084226 /* PBXTargetDependency */,
+			);
+			name = "Umea StudentTests";
+			productName = "Umea StudentTests";
+			productReference = 5524766B159E74CC00084226 /* Umea StudentTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55247642159E74CC00084226 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 55247645159E74CC00084226 /* Build configuration list for PBXProject "Umea Student" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55247640159E74CC00084226;
+			productRefGroup = 5524764C159E74CC00084226 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5524764A159E74CC00084226 /* Umea Student */,
+				5524766A159E74CC00084226 /* Umea StudentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55247649159E74CC00084226 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5524765C159E74CC00084226 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55247668159E74CC00084226 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55247678159E74CD00084226 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55247669159E74CC00084226 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55247647159E74CC00084226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5524765E159E74CC00084226 /* main.m in Sources */,
+				55247662159E74CC00084226 /* AppDelegate.m in Sources */,
+				55247665159E74CC00084226 /* Umea_Student.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55247666159E74CC00084226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5524767B159E74CD00084226 /* Umea_StudentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55247672159E74CD00084226 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5524764A159E74CC00084226 /* Umea Student */;
+			targetProxy = 55247671159E74CD00084226 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5524765A159E74CC00084226 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5524765B159E74CC00084226 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55247676159E74CD00084226 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55247677159E74CD00084226 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5524767C159E74CD00084226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5524767D159E74CD00084226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5524767F159E74CD00084226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Umea Student/Umea Student-Prefix.pch";
+				INFOPLIST_FILE = "Umea Student/Umea Student-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55247680159E74CD00084226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Umea Student/Umea Student-Prefix.pch";
+				INFOPLIST_FILE = "Umea Student/Umea Student-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55247682159E74CD00084226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Umea Student.app/Umea Student";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Umea Student/Umea Student-Prefix.pch";
+				INFOPLIST_FILE = "Umea StudentTests/Umea StudentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		55247683159E74CD00084226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Umea Student.app/Umea Student";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Umea Student/Umea Student-Prefix.pch";
+				INFOPLIST_FILE = "Umea StudentTests/Umea StudentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55247645159E74CC00084226 /* Build configuration list for PBXProject "Umea Student" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5524767C159E74CD00084226 /* Debug */,
+				5524767D159E74CD00084226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5524767E159E74CD00084226 /* Build configuration list for PBXNativeTarget "Umea Student" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5524767F159E74CD00084226 /* Debug */,
+				55247680159E74CD00084226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55247681159E74CD00084226 /* Build configuration list for PBXNativeTarget "Umea StudentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55247682159E74CD00084226 /* Debug */,
+				55247683159E74CD00084226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55247663159E74CC00084226 /* Umea_Student.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55247664159E74CC00084226 /* Umea_Student.xcdatamodel */,
+			);
+			currentVersion = 55247664159E74CC00084226 /* Umea_Student.xcdatamodel */;
+			path = Umea_Student.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 55247642159E74CC00084226 /* Project object */;
+}
