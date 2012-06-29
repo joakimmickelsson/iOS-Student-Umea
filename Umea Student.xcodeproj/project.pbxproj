@@ -39,18 +39,18 @@
 		55247651159E74CC00084226 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55247653159E74CC00084226 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		55247655159E74CC00084226 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		55247659159E74CC00084226 /* Umea Student-Info.plist */ = {isa = PBXFileReference; path = "Umea Student-Info.plist"; sourceTree = "<group>"; };
+		55247659159E74CC00084226 /* Umea Student-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Umea Student-Info.plist"; sourceTree = "<group>"; };
 		5524765B159E74CC00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5524765D159E74CC00084226 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5524765F159E74CC00084226 /* Umea Student-Prefix.pch */ = {isa = PBXFileReference; path = "Umea Student-Prefix.pch"; sourceTree = "<group>"; };
-		55247660159E74CC00084226 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5524765F159E74CC00084226 /* Umea Student-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Umea Student-Prefix.pch"; sourceTree = "<group>"; };
+		55247660159E74CC00084226 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55247661159E74CC00084226 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		55247664159E74CC00084226 /* Umea_Student.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Umea_Student.xcdatamodel; sourceTree = "<group>"; };
 		5524766B159E74CC00084226 /* Umea StudentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Umea StudentTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5524766C159E74CC00084226 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		55247675159E74CD00084226 /* Umea StudentTests-Info.plist */ = {isa = PBXFileReference; path = "Umea StudentTests-Info.plist"; sourceTree = "<group>"; };
+		55247675159E74CD00084226 /* Umea StudentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Umea StudentTests-Info.plist"; sourceTree = "<group>"; };
 		55247677159E74CD00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		55247679159E74CD00084226 /* Umea_StudentTests.h */ = {isa = PBXFileReference; path = Umea_StudentTests.h; sourceTree = "<group>"; };
+		55247679159E74CD00084226 /* Umea_StudentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Umea_StudentTests.h; sourceTree = "<group>"; };
 		5524767A159E74CD00084226 /* Umea_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Umea_StudentTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
