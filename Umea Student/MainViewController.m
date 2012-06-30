@@ -32,7 +32,7 @@
 @synthesize newsTableView;
 
 - (void)viewDidLoad {
-
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(loadMainViewComponents:) 
                                                  name:@"AppEnteredForeground" 
@@ -40,18 +40,18 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-
-     if([LastUpdate isTheAppRunningForTheFirstTime]){
-         NSLog(@"first is the apprunningfor the first time");
-         
-         [self loadMainViewComponents:nil];
-         
-         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-         [defaults setBool:NO forKey:@"studentAppFirstTimeUse"];
-                  
-         [defaults synchronize];
-     }
+    
+    if([LastUpdate isTheAppRunningForTheFirstTime]){
+        NSLog(@"first is the apprunningfor the first time");
+        
+        [self loadMainViewComponents:nil];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        [defaults setBool:NO forKey:@"studentAppFirstTimeUse"];
+        
+        [defaults synchronize];
+    }
     
     if([LastUpdate isTheAppRunningNewVersion] ){
         NSLog(@"New version");
@@ -61,19 +61,18 @@
         [LastUpdate upgradeVersion];
         
         [defaults synchronize];
-     
+        
         [self loadMainViewComponents:nil];
-         
-     }
+        
+    }
     
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
-
+    
     [self setupSchemaTableView];
     
-
     [self setupPlacesTableView];
     [self setUpShadows];
 }
@@ -84,7 +83,7 @@
 
 -(void)setupPlacesTableView{
     NSLog(@"setupplaces");
-
+    
     [self.placesTableView setUpPlacesTableView];
     [self setUpPlacesContainer];
     
@@ -96,20 +95,20 @@
         
         NSLog(@"fetched stämmer");
     }    
-
+    
     self.placesTableView.navigationController = self.navigationController;
-
+    
     [self.placesTableView.tableView reloadData];
 }
 
 
 
 -(void)setupSchemaTableView{
-
+    
     //Ställer in schema och platslistorna
     [self.schemaTableView setupSchemaTableView];
     [self.schemaTableView.tableView reloadData];
-
+    
     
     
     
@@ -118,13 +117,13 @@
     
     
     
-
+    
     
 }
 
 
 -(void)setupEventsAndNewsTableViews{
-
+    
     //Lägger till en spinner för nedladdningen.
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     [spinner startAnimating];
@@ -140,12 +139,12 @@
         
         //Ställer in evenemang och nyhetstableviewna om internet finns flr att hämta rss data.
         NSLog(@"before");
-
+        
         if([CheckInternetConnection checkInternetConnection:@"Inget Internet" :@"Kan inte hämta evenemang och nyheter"])
         {
             
             NSLog(@"after");
-
+            
             if(![self.eventsTableView.tableViewIsLoaded isEqualToString:@"YES"]){
                 
                 [self.eventsTableView setUpEventsTableView];
@@ -200,7 +199,7 @@
     });
     
     dispatch_release(eventsAndNewsQueue);
-
+    
 }
 
 
@@ -208,25 +207,25 @@
     
     //Ställer in appens huvudfönster
     [scrollView setContentSize:CGSizeMake(960,scrollView.frame.size.height)];
-
+    
     
     //Scrolla scrollviewen till hemskärmen.
     [self.scrollView scrollRectToVisible:CGRectMake(320, 0, 320, 480) animated:NO];
-
+    
     self.scrollView.pagingEnabled = YES;
     
     [self setupEventsAndNewsTableViews];
     
     [self setUpShadows];
-
+    
     [self downLoadPlaces]; 
-
+    
     [self setupPlacesTableView];
-        [self.placesTableView.tableView reloadData];
-
+    [self.placesTableView.tableView reloadData];
+    
     //Skuggor för vissa element
-        
-
+    
+    
 }
 
 
@@ -237,7 +236,7 @@
         
         
         NSLog(@"lshould update");
-
+        
         //Sätter en spinner uppe i hörnet
         
         if(self.navigationItem.rightBarButtonItem == nil) {
@@ -260,21 +259,19 @@
                 
                 [placesHandler savePlacesToDatabaseContext:[placesHandler getPlacesFromWeb]];
                 NSLog(@"places saved");
-
+                
                 //Tar bort spinnern. Detta måste göras i main_queue() eftersom det rör gränssnittet.
                 
                 [self setupPlacesTableView];
-
+                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     [self.placesTableView.tableView reloadData];
-
+                    
                     self.navigationItem.rightBarButtonItem = nil;    
                     
                 });
-    
-            
-            
+                
             }
             
             else
@@ -294,21 +291,28 @@
         
         dispatch_release(downloadQueue);
         
-
+        
         
         [LastUpdate setLastUpdate];
         
     }
     
-    else{
+    else{ 
+        
+        [self setupPlacesTableView];
+        
+        [self.placesTableView.tableView reloadData];
+            
+            
+
         
         NSLog(@"no update required");
         
         
     }
     
-
-
+    
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {  
@@ -464,8 +468,8 @@
     //Ställer in var containern till platslistan är någonstant. Sätter även rundade hörn å en border på containern så att den liknar schemalistan.
     self.placesContainerView.layer.masksToBounds = YES;
     self.placesContainerView.layer.cornerRadius = 10;
-      self.placesContainerView.layer.borderWidth = 0.1;
-      self.placesContainerView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.placesContainerView.layer.borderWidth = 0.1;
+    self.placesContainerView.layer.borderColor = [UIColor blackColor].CGColor;
     
     self.placesContainerView.frame = CGRectMake(
                                                 schemaTableView.tableView.frame.origin.x,

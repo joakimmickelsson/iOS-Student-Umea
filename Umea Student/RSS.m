@@ -18,4 +18,5 @@
 @synthesize url;
 @synthesize pubDate;
 
+
 @end

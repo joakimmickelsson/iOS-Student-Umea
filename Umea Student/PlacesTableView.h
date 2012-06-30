@@ -16,7 +16,6 @@
 #import "HorizontalPlaceCell.h"
 #import "FetchRequest.h"
 
-
 @interface PlacesTableView : NSObject  <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic,strong) NSFetchedResultsController *fetchedResultsController;

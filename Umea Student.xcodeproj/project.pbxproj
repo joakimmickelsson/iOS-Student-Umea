@@ -19,6 +19,10 @@
 		55247670159E74CC00084226 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247655159E74CC00084226 /* CoreData.framework */; };
 		55247678159E74CD00084226 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55247676159E74CD00084226 /* InfoPlist.strings */; };
 		5524767B159E74CD00084226 /* Umea_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524767A159E74CD00084226 /* Umea_StudentTests.m */; };
+		5534BBB7159F83B9009E9E8A /* ToFiX.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB6159F83B9009E9E8A /* ToFiX.rtf */; };
+		5534BBB8159F83B9009E9E8A /* ToFiX.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB6159F83B9009E9E8A /* ToFiX.rtf */; };
+		5534BBBA159F865A009E9E8A /* StudentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB9159F865A009E9E8A /* StudentInfo.xib */; };
+		5534BBBB159F865A009E9E8A /* StudentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB9159F865A009E9E8A /* StudentInfo.xib */; };
 		55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
 		55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
 		557F63E8159E773B00A13BAA /* CheckInternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E3159E773B00A13BAA /* CheckInternetConnection.m */; };
@@ -164,6 +168,8 @@
 		55247677159E74CD00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55247679159E74CD00084226 /* Umea_StudentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Umea_StudentTests.h; sourceTree = "<group>"; };
 		5524767A159E74CD00084226 /* Umea_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Umea_StudentTests.m; sourceTree = "<group>"; };
+		5534BBB6159F83B9009E9E8A /* ToFiX.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = ToFiX.rtf; path = "Umea Student/ToFiX.rtf"; sourceTree = "<group>"; };
+		5534BBB9159F865A009E9E8A /* StudentInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentInfo.xib; sourceTree = "<group>"; };
 		55582350159E7EB30091D848 /* Student_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student_App.xcdatamodel; sourceTree = "<group>"; };
 		557F63E3159E773B00A13BAA /* CheckInternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInternetConnection.m; sourceTree = "<group>"; };
 		557F63E4159E773B00A13BAA /* EventsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableView.m; sourceTree = "<group>"; };
@@ -287,14 +293,9 @@
 		55247640159E74CC00084226 = {
 			isa = PBXGroup;
 			children = (
-				557F64AC159E78B400A13BAA /* CoreMotion.framework */,
-				557F64AA159E78AB00A13BAA /* AVFoundation.framework */,
-				557F64A8159E78A200A13BAA /* OpenGLES.framework */,
-				557F64A6159E789300A13BAA /* AssetsLibrary.framework */,
-				557F64A4159E786500A13BAA /* CoreLocation.framework */,
-				557F64A2159E785200A13BAA /* MapKit.framework */,
-				557F64A0159E784700A13BAA /* QuartzCore.framework */,
+				5534BBB6159F83B9009E9E8A /* ToFiX.rtf */,
 				557F6428159E776300A13BAA /* iPhone_Storyboard.storyboard */,
+				5534BBB9159F865A009E9E8A /* StudentInfo.xib */,
 				55247657159E74CC00084226 /* Umea Student */,
 				55247673159E74CD00084226 /* Umea StudentTests */,
 				5524764E159E74CC00084226 /* Frameworks */,
@@ -314,6 +315,13 @@
 		5524764E159E74CC00084226 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				557F64AC159E78B400A13BAA /* CoreMotion.framework */,
+				557F64AA159E78AB00A13BAA /* AVFoundation.framework */,
+				557F64A8159E78A200A13BAA /* OpenGLES.framework */,
+				557F64A6159E789300A13BAA /* AssetsLibrary.framework */,
+				557F64A4159E786500A13BAA /* CoreLocation.framework */,
+				557F64A2159E785200A13BAA /* MapKit.framework */,
+				557F64A0159E784700A13BAA /* QuartzCore.framework */,
 				5524764F159E74CC00084226 /* UIKit.framework */,
 				55247651159E74CC00084226 /* Foundation.framework */,
 				55247653159E74CC00084226 /* CoreGraphics.framework */,
@@ -326,7 +334,15 @@
 		55247657159E74CC00084226 /* Umea Student */ = {
 			isa = PBXGroup;
 			children = (
-				557F63E1159E771000A13BAA /* Files */,
+				5574E0F3159F04140061D781 /* MainView */,
+				5574E0F6159F04340061D781 /* Schema */,
+				5574E0F8159F04510061D781 /* Map */,
+				5574E0F5159F04270061D781 /* Places */,
+				5574E0F7159F04380061D781 /* WebView */,
+				5574E0FA159F047E0061D781 /* RSS */,
+				5574E0FD159F06180061D781 /* StudentInfo */,
+				5574E0FB159F05C20061D781 /* Helpers */,
+				557F6441159E778600A13BAA /* images */,
 				55247658159E74CC00084226 /* Supporting Files */,
 			);
 			path = "Umea Student";
@@ -335,6 +351,8 @@
 		55247658159E74CC00084226 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				557F64B2159E797A00A13BAA /* AppDelegate.h */,
+				557F64B3159E798B00A13BAA /* AppDelegate.m */,
 				5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */,
 				55247659159E74CC00084226 /* Umea Student-Info.plist */,
 				5524765A159E74CC00084226 /* InfoPlist.strings */,
@@ -363,58 +381,120 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		557F63E1159E771000A13BAA /* Files */ = {
+		5534BBB5159F7F3A009E9E8A /* ViewsOnMainView */ = {
 			isa = PBXGroup;
 			children = (
-				557F64B2159E797A00A13BAA /* AppDelegate.h */,
-				557F64B3159E798B00A13BAA /* AppDelegate.m */,
-				557F6441159E778600A13BAA /* images */,
-				557F642B159E777B00A13BAA /* CheckInternetConnection.h */,
-				557F642C159E777B00A13BAA /* EventsTableView.h */,
-				557F642D159E777B00A13BAA /* FetchRequest.h */,
-				557F642E159E777B00A13BAA /* HorizontalPlaceCell.h */,
-				557F642F159E777B00A13BAA /* LastUpdate.h */,
-				557F6430159E777B00A13BAA /* MainViewController.h */,
-				557F6431159E777B00A13BAA /* MapAnnotation.h */,
-				557F6432159E777B00A13BAA /* MapViewController.h */,
-				557F6433159E777B00A13BAA /* NewsTableView.h */,
-				557F6434159E777B00A13BAA /* Place.h */,
-				557F6435159E777B00A13BAA /* PlacesHandler.h */,
-				557F6436159E777B00A13BAA /* PlacesSearchViewController.h */,
-				557F6437159E777B00A13BAA /* PlacesTableView.h */,
-				557F6438159E777B00A13BAA /* RSS.h */,
-				557F6439159E777B00A13BAA /* RSSCell.h */,
-				557F643A159E777B00A13BAA /* Schema.h */,
-				557F643B159E777B00A13BAA /* SchemaHandler.h */,
 				557F643C159E777B00A13BAA /* SchemaTableView.h */,
-				557F643D159E777B00A13BAA /* SchemaViewController.h */,
-				557F643E159E777B00A13BAA /* StudentInfo.h */,
-				557F643F159E777B00A13BAA /* TableViewController.h */,
-				557F6440159E777B00A13BAA /* WebViewController.h */,
-				557F63E3159E773B00A13BAA /* CheckInternetConnection.m */,
-				557F63E4159E773B00A13BAA /* EventsTableView.m */,
-				557F63E5159E773B00A13BAA /* FetchRequest.m */,
-				557F63E6159E773B00A13BAA /* HorizontalPlaceCell.m */,
-				557F63E7159E773B00A13BAA /* LastUpdate.m */,
-				557F63F2159E774D00A13BAA /* MainViewController.m */,
-				557F63F3159E774D00A13BAA /* MapAnnotation.m */,
-				557F63F4159E774D00A13BAA /* MapViewController.m */,
-				557F63F5159E774D00A13BAA /* NewsTableView.m */,
-				557F63F6159E774D00A13BAA /* Place.m */,
-				557F63F7159E774D00A13BAA /* PlacesHandler.m */,
-				557F63F8159E774D00A13BAA /* PlacesSearchViewController.m */,
-				557F63F9159E774D00A13BAA /* PlacesTableView.m */,
-				557F63FA159E774D00A13BAA /* RSS.m */,
-				557F63FB159E774D00A13BAA /* RSSCell.m */,
-				557F63FC159E774D00A13BAA /* Schema.m */,
-				557F63FD159E774D00A13BAA /* SchemaHandler.m */,
 				557F63FE159E774D00A13BAA /* SchemaTableView.m */,
+				557F6437159E777B00A13BAA /* PlacesTableView.h */,
+				557F63F9159E774D00A13BAA /* PlacesTableView.m */,
+				557F642C159E777B00A13BAA /* EventsTableView.h */,
+				557F63E4159E773B00A13BAA /* EventsTableView.m */,
+				557F6433159E777B00A13BAA /* NewsTableView.h */,
+				557F63F5159E774D00A13BAA /* NewsTableView.m */,
+			);
+			name = ViewsOnMainView;
+			sourceTree = "<group>";
+		};
+		5574E0F3159F04140061D781 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				557F6430159E777B00A13BAA /* MainViewController.h */,
+				557F63F2159E774D00A13BAA /* MainViewController.m */,
+				5534BBB5159F7F3A009E9E8A /* ViewsOnMainView */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		5574E0F5159F04270061D781 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				557F6434159E777B00A13BAA /* Place.h */,
+				557F63F6159E774D00A13BAA /* Place.m */,
+				557F6435159E777B00A13BAA /* PlacesHandler.h */,
+				557F63F7159E774D00A13BAA /* PlacesHandler.m */,
+				557F642E159E777B00A13BAA /* HorizontalPlaceCell.h */,
+				557F63E6159E773B00A13BAA /* HorizontalPlaceCell.m */,
+				557F6436159E777B00A13BAA /* PlacesSearchViewController.h */,
+				557F63F8159E774D00A13BAA /* PlacesSearchViewController.m */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
+		5574E0F6159F04340061D781 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				557F643A159E777B00A13BAA /* Schema.h */,
+				557F63FC159E774D00A13BAA /* Schema.m */,
+				557F643B159E777B00A13BAA /* SchemaHandler.h */,
+				557F63FD159E774D00A13BAA /* SchemaHandler.m */,
+				557F643D159E777B00A13BAA /* SchemaViewController.h */,
 				557F63FF159E774D00A13BAA /* SchemaViewController.m */,
-				557F6400159E774D00A13BAA /* StudentInfo.m */,
-				557F6401159E774D00A13BAA /* TableViewController.m */,
+			);
+			name = Schema;
+			sourceTree = "<group>";
+		};
+		5574E0F7159F04380061D781 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				557F6440159E777B00A13BAA /* WebViewController.h */,
 				557F6402159E774D00A13BAA /* WebViewController.m */,
 			);
-			name = Files;
+			name = WebView;
+			sourceTree = "<group>";
+		};
+		5574E0F8159F04510061D781 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				557F6432159E777B00A13BAA /* MapViewController.h */,
+				557F63F4159E774D00A13BAA /* MapViewController.m */,
+				557F6431159E777B00A13BAA /* MapAnnotation.h */,
+				557F63F3159E774D00A13BAA /* MapAnnotation.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		5574E0FA159F047E0061D781 /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				557F6438159E777B00A13BAA /* RSS.h */,
+				557F63FA159E774D00A13BAA /* RSS.m */,
+				557F6439159E777B00A13BAA /* RSSCell.h */,
+				557F63FB159E774D00A13BAA /* RSSCell.m */,
+			);
+			name = RSS;
+			sourceTree = "<group>";
+		};
+		5574E0FB159F05C20061D781 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				557F642D159E777B00A13BAA /* FetchRequest.h */,
+				557F63E5159E773B00A13BAA /* FetchRequest.m */,
+				557F642F159E777B00A13BAA /* LastUpdate.h */,
+				557F63E7159E773B00A13BAA /* LastUpdate.m */,
+				557F63E3159E773B00A13BAA /* CheckInternetConnection.m */,
+				557F642B159E777B00A13BAA /* CheckInternetConnection.h */,
+				5574E0FE159F06520061D781 /* Inherit From These */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5574E0FD159F06180061D781 /* StudentInfo */ = {
+			isa = PBXGroup;
+			children = (
+				557F643E159E777B00A13BAA /* StudentInfo.h */,
+				557F6400159E774D00A13BAA /* StudentInfo.m */,
+			);
+			name = StudentInfo;
+			sourceTree = "<group>";
+		};
+		5574E0FE159F06520061D781 /* Inherit From These */ = {
+			isa = PBXGroup;
+			children = (
+				557F643F159E777B00A13BAA /* TableViewController.h */,
+				557F6401159E774D00A13BAA /* TableViewController.m */,
+			);
+			name = "Inherit From These";
 			sourceTree = "<group>";
 		};
 		557F6441159E778600A13BAA /* images */ = {
@@ -556,6 +636,8 @@
 				557F6496159E77A200A13BAA /* schemaarrow.png in Resources */,
 				557F6498159E77A200A13BAA /* security.png in Resources */,
 				557F649A159E77A200A13BAA /* webcam.png in Resources */,
+				5534BBB7159F83B9009E9E8A /* ToFiX.rtf in Resources */,
+				5534BBBA159F865A009E9E8A /* StudentInfo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +677,8 @@
 				557F6497159E77A200A13BAA /* schemaarrow.png in Resources */,
 				557F6499159E77A200A13BAA /* security.png in Resources */,
 				557F649B159E77A200A13BAA /* webcam.png in Resources */,
+				5534BBB8159F83B9009E9E8A /* ToFiX.rtf in Resources */,
+				5534BBBB159F865A009E9E8A /* StudentInfo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

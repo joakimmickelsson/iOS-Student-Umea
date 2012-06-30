@@ -23,8 +23,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
-    
+    [webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: urlString]
+                                           
+    cachePolicy: NSURLRequestReturnCacheDataElseLoad
+                                       timeoutInterval: 60*60]];
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{

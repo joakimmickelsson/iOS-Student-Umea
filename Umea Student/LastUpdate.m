@@ -111,7 +111,6 @@
     }
     else{
     
-    
         //Kikar om senaste uppdatering var mer än 7 dagar sedan. Isåfall uppdaterar den platserna.
         
         NSLog(@"timeIntervalSinceReferenceDate%@",lastPlacesUpdateDate);
