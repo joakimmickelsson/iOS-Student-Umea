@@ -157,9 +157,9 @@
         
     }
     
-    //  self.tableView.layer.cornerRadius = 10;
-    //  self.tableView.layer.borderWidth = 0.1;
-    //  self.tableView.layer.borderColor = [UIColor blackColor].CGColor;
+      self.tableView.layer.cornerRadius = 10;
+      self.tableView.layer.borderWidth = 0.1;
+      self.tableView.layer.borderColor = [UIColor blackColor].CGColor;
     
         
 }

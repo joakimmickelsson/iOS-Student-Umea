@@ -464,8 +464,8 @@
     //Ställer in var containern till platslistan är någonstant. Sätter även rundade hörn å en border på containern så att den liknar schemalistan.
     self.placesContainerView.layer.masksToBounds = YES;
     self.placesContainerView.layer.cornerRadius = 10;
-    //  self.placesContainerView.layer.borderWidth = 0.1;
-    //  self.placesContainerView.layer.borderColor = [UIColor blackColor].CGColor;
+      self.placesContainerView.layer.borderWidth = 0.1;
+      self.placesContainerView.layer.borderColor = [UIColor blackColor].CGColor;
     
     self.placesContainerView.frame = CGRectMake(
                                                 schemaTableView.tableView.frame.origin.x,
