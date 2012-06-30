@@ -1,15 +1,15 @@
 //
 //  AppDelegate.h
-//  Student App
+//  Umea Student
 //
-//  Created by Joakim Mickelsson on 5/8/12.
+//  Created by Joakim Mickelsson on 6/30/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate2
+: UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -19,7 +19,5 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
--(void)setupNavBar;
 
 @end

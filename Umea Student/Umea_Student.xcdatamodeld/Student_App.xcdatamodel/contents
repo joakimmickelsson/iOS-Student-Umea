@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="LastUpdate" syncable="YES">
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Place" syncable="YES">
+        <attribute name="floor" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniqueId" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Schema" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stored" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniqueId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Place" positionX="196" positionY="144" width="128" height="135"/>
+        <element name="Schema" positionX="61" positionY="144" width="128" height="105"/>
+        <element name="LastUpdate" positionX="126" positionY="189" width="128" height="60"/>
+    </elements>
+</model>

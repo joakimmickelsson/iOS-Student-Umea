@@ -1,14 +1,14 @@
 //
 //  AppDelegate.m
-//  Student App
+//  Umea Student
 //
-//  Created by Joakim Mickelsson on 5/8/12.
+//  Created by Joakim Mickelsson on 6/30/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "AppDelegate2.h"
 
-@implementation AppDelegate
+@implementation AppDelegate2
 
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
@@ -17,23 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    //New code added
     
-    [self setupNavBar];
-    
-    [application setStatusBarStyle:UIStatusBarStyleBlackOpaque];
-    
-
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
-}
-
-
-
--(void)setupNavBar{
-
-     UIImage *navBarImage = [UIImage imageNamed:@"NavBarBlue.png"];
-    
-    [[UINavigationBar appearance] setBackgroundImage:navBarImage forBarMetrics:UIBarMetricsDefault];
-
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -50,17 +40,11 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    
-    
-    
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"AppEnteredForeground" 
-                                                        object:nil];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
@@ -122,13 +106,11 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Student_App.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Umea_Student.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        
-        NSLog(@"Error%@",error);
         /*
          Replace this implementation with code to handle the error appropriately.
          
@@ -153,7 +135,7 @@
          
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        //  abort();
+        abort();
     }    
     
     return __persistentStoreCoordinator;
