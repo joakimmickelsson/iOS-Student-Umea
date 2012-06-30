@@ -83,7 +83,6 @@
     
     [headerView addSubview:imageView];
     
-    
     //Texten
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, self.tableView.bounds.size.width - 10, 15)] ;
     

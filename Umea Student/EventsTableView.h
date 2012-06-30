@@ -10,30 +10,11 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "RSS.h"
-#import "RSSCell.h"
-#import "WebViewController.h"
-
-@interface EventsTableView : NSObject  <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate>
-
-@property(nonatomic,strong) IBOutlet UITableView *tableView;
-@property(nonatomic,strong)  RSS *eventsObject;
-
-@property(nonatomic,strong)  NSMutableArray *rssOutputData;
-
-@property(nonatomic,strong)  NSMutableString *nodecontent;
-
-@property(nonatomic,strong)  NSXMLParser *xmlParserObject;
-
-@property(nonatomic,strong) IBOutlet UILabel *titleLabel;
-@property(nonatomic,strong) IBOutlet UILabel *descriptionLabel;
-@property(nonatomic,strong) IBOutlet UILabel *dateLabel;
-
-@property (nonatomic,strong) NSString *tableViewIsLoaded;
+#import "RSSTableView.h"
 
 
-@property (nonatomic,strong) RSSCell *cell;
+@interface EventsTableView : RSSTableView
 
--(void)setUpEventsTableView;
+-(void)setupEventsTableView;
 
 @end

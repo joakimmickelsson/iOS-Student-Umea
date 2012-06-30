@@ -22,6 +22,7 @@
 #import "LastUpdate.h"
 #import "EventsTableView.h"
 #import "NewsTableView.h"
+#import "WebViewObject.h"
 
 @interface MainViewController : UIViewController <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
@@ -30,9 +31,12 @@
 //Titeln som användaren scrollar till
 @property (nonatomic,strong) IBOutlet UIView *sectionView;
 
-@property (nonatomic,strong) IBOutlet UIButton *eventsSection;
-@property (nonatomic,strong) IBOutlet UIButton *homeSection;
 @property (nonatomic,strong) IBOutlet UIButton *infoSection;
+@property (nonatomic,strong) IBOutlet UIButton *homeSection;
+@property (nonatomic,strong) IBOutlet UIButton *eventsSection;
+@property (nonatomic,strong) IBOutlet UIButton *newsSection;
+
+@property (nonatomic,strong) IBOutlet WebViewObject *studentInfoWebView;
 
 @property (nonatomic,strong) IBOutlet SchemaTableView *schemaTableView;
 @property (nonatomic,strong) IBOutlet UIView *schemaShadowView;
@@ -43,6 +47,8 @@
 
 @property (nonatomic,strong) IBOutlet EventsTableView *eventsTableView;
 @property (nonatomic,strong) IBOutlet NewsTableView *newsTableView;
+
+
 
 -(void)setUpPlacesContainer;
 -(void)setUpShadows;

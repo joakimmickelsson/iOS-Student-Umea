@@ -23,6 +23,10 @@
 		5534BBB8159F83B9009E9E8A /* ToFiX.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB6159F83B9009E9E8A /* ToFiX.rtf */; };
 		5534BBBA159F865A009E9E8A /* StudentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB9159F865A009E9E8A /* StudentInfo.xib */; };
 		5534BBBB159F865A009E9E8A /* StudentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB9159F865A009E9E8A /* StudentInfo.xib */; };
+		5534BBCA159F9BD6009E9E8A /* WebViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBC9159F9BD6009E9E8A /* WebViewObject.m */; };
+		5534BBCB159F9BD6009E9E8A /* WebViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBC9159F9BD6009E9E8A /* WebViewObject.m */; };
+		5534BBCE159FB497009E9E8A /* RSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBCD159FB497009E9E8A /* RSSTableView.m */; };
+		5534BBCF159FB497009E9E8A /* RSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBCD159FB497009E9E8A /* RSSTableView.m */; };
 		55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
 		55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
 		557F63E8159E773B00A13BAA /* CheckInternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E3159E773B00A13BAA /* CheckInternetConnection.m */; };
@@ -170,6 +174,10 @@
 		5524767A159E74CD00084226 /* Umea_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Umea_StudentTests.m; sourceTree = "<group>"; };
 		5534BBB6159F83B9009E9E8A /* ToFiX.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = ToFiX.rtf; path = "Umea Student/ToFiX.rtf"; sourceTree = "<group>"; };
 		5534BBB9159F865A009E9E8A /* StudentInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentInfo.xib; sourceTree = "<group>"; };
+		5534BBC8159F9BD6009E9E8A /* WebViewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewObject.h; sourceTree = "<group>"; };
+		5534BBC9159F9BD6009E9E8A /* WebViewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewObject.m; sourceTree = "<group>"; };
+		5534BBCC159FB497009E9E8A /* RSSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSTableView.h; sourceTree = "<group>"; };
+		5534BBCD159FB497009E9E8A /* RSSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSTableView.m; sourceTree = "<group>"; };
 		55582350159E7EB30091D848 /* Student_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student_App.xcdatamodel; sourceTree = "<group>"; };
 		557F63E3159E773B00A13BAA /* CheckInternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInternetConnection.m; sourceTree = "<group>"; };
 		557F63E4159E773B00A13BAA /* EventsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableView.m; sourceTree = "<group>"; };
@@ -392,6 +400,8 @@
 				557F63E4159E773B00A13BAA /* EventsTableView.m */,
 				557F6433159E777B00A13BAA /* NewsTableView.h */,
 				557F63F5159E774D00A13BAA /* NewsTableView.m */,
+				5534BBC8159F9BD6009E9E8A /* WebViewObject.h */,
+				5534BBC9159F9BD6009E9E8A /* WebViewObject.m */,
 			);
 			name = ViewsOnMainView;
 			sourceTree = "<group>";
@@ -461,6 +471,8 @@
 				557F63FA159E774D00A13BAA /* RSS.m */,
 				557F6439159E777B00A13BAA /* RSSCell.h */,
 				557F63FB159E774D00A13BAA /* RSSCell.m */,
+				5534BBCC159FB497009E9E8A /* RSSTableView.h */,
+				5534BBCD159FB497009E9E8A /* RSSTableView.m */,
 			);
 			name = RSS;
 			sourceTree = "<group>";
@@ -730,6 +742,8 @@
 				557F6423159E774D00A13BAA /* WebViewController.m in Sources */,
 				557F64B4159E798B00A13BAA /* AppDelegate.m in Sources */,
 				55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */,
+				5534BBCA159F9BD6009E9E8A /* WebViewObject.m in Sources */,
+				5534BBCE159FB497009E9E8A /* RSSTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +776,8 @@
 				557F6424159E774D00A13BAA /* WebViewController.m in Sources */,
 				557F64B5159E798B00A13BAA /* AppDelegate.m in Sources */,
 				55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */,
+				5534BBCB159F9BD6009E9E8A /* WebViewObject.m in Sources */,
+				5534BBCF159FB497009E9E8A /* RSSTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

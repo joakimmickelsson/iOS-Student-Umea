@@ -30,6 +30,8 @@
 @synthesize eventsSection;
 @synthesize infoSection;
 @synthesize newsTableView;
+@synthesize newsSection;
+@synthesize studentInfoWebView;
 
 - (void)viewDidLoad {
     
@@ -41,6 +43,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     
+        
     if([LastUpdate isTheAppRunningForTheFirstTime]){
         NSLog(@"first is the apprunningfor the first time");
         
@@ -66,6 +69,12 @@
         
     }
     
+    else{
+    
+        [self.studentInfoWebView load:@"http://google.se"];
+            
+    }
+    
 }
 
 
@@ -74,7 +83,12 @@
     [self setupSchemaTableView];
     
     [self setupPlacesTableView];
+    
     [self setUpShadows];
+    
+    self.eventsTableView.headerTitle = @"Evenemang";
+    self.newsTableView.headerTitle = @"Nyheter";
+
 }
 
 
@@ -124,14 +138,9 @@
 
 -(void)setupEventsAndNewsTableViews{
     
-    //Lägger till en spinner för nedladdningen.
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    [spinner startAnimating];
-    
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
-    
-    
+
+
+
     NSLog(@"downloading eventsand news");
     dispatch_queue_t eventsAndNewsQueue = dispatch_queue_create("Downloading Events and News", NULL);
     
@@ -147,7 +156,7 @@
             
             if(![self.eventsTableView.tableViewIsLoaded isEqualToString:@"YES"]){
                 
-                [self.eventsTableView setUpEventsTableView];
+                [self.eventsTableView setupEventsTableView]; 
                 
                 self.eventsTableView.tableViewIsLoaded = @"YES";
                 
@@ -155,15 +164,14 @@
                     
                     [self.eventsTableView.tableView reloadData];
                     
-                    
                 });
-                
                 
             }
             
             if(![self.newsTableView.tableViewIsLoaded isEqualToString:@"YES"]){
                 
-                [self.newsTableView setUpNewsTableView];    
+
+                [self.newsTableView setupNewsTableView];
                 
                 self.newsTableView.tableViewIsLoaded = @"YES";
                 
@@ -206,7 +214,7 @@
 - (void)loadMainViewComponents:(id)object{
     
     //Ställer in appens huvudfönster
-    [scrollView setContentSize:CGSizeMake(960,scrollView.frame.size.height)];
+    [scrollView setContentSize:CGSizeMake(1280,scrollView.frame.size.height)];
     
     
     //Scrolla scrollviewen till hemskärmen.
@@ -318,17 +326,21 @@
 - (void)scrollViewDidScroll:(UIScrollView *)sender {  
     
     //Animationen av sliden av sectionViewen när scrollViewen scrollar.
-    sectionView.center = CGPointMake(267 - sender.contentOffset.x/3, sectionView.center.y);
-    
+    sectionView.center = CGPointMake(347 - sender.contentOffset.x/3, sectionView.center.y);
     
     //Animationen av textstorleken i sectionViewen. 
-    float middleOfHomeSectionView = 106.5 - ABS(sectionView.frame.origin.x);
-    float middleOfEventsSectionView = (sectionView.frame.origin.x);
-    float middleOfNewsSectionView = ABS(sectionView.frame.origin.x -106.5) -106.5 ;
+    float middleOfInfoSectionView = (sectionView.frame.origin.x);
+    float middleOfHomeSectionView = 120 - ABS(sectionView.frame.origin.x);
+    float middleOfEventsSectionView =120 -ABS(sectionView.frame.origin.x +120);
+    float middleOfNewsSectionView = ABS(sectionView.frame.origin.x)-120;
+
+    // När texten för varje view är i mitten ska middlevärderna vara 120.
     
-    homeSection.titleLabel.font = [UIFont boldSystemFontOfSize: (11 + 5*middleOfHomeSectionView/106.5)];
-    eventsSection.titleLabel.font = [UIFont boldSystemFontOfSize: (11 + 5*middleOfEventsSectionView/(106.5))];
-    infoSection.titleLabel.font = [UIFont boldSystemFontOfSize: (11 + 5*middleOfNewsSectionView/106.5)];
+    homeSection.titleLabel.font =   [UIFont boldSystemFontOfSize: (11 + 5*middleOfHomeSectionView   /120)];
+    infoSection.titleLabel.font =   [UIFont boldSystemFontOfSize: (11 + 5*middleOfInfoSectionView   /(120))];
+    eventsSection.titleLabel.font = [UIFont boldSystemFontOfSize: (11 + 5*middleOfEventsSectionView /120)];
+    newsSection.titleLabel.font =   [UIFont boldSystemFontOfSize: (11 + 5*middleOfNewsSectionView  /120)];
+
     
 }
 

@@ -179,26 +179,26 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="ZvQ-6T-V3s">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <view contentMode="scaleToFill" id="ZvQ-6T-V3s" userLabel="sectionsViewBackground">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="listheader" id="IlM-i4-W10">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.37998246173469385" green="0.37998246173469385" blue="0.37998246173469385" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="ANz-z1-G0I" userLabel="sectionView">
-                                <rect key="frame" x="0.5" y="0.0" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="jry-pA-Fub">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
-                                        <state key="normal" title="Evenemang">
+                                        <state key="normal" title="Student Info">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -225,7 +225,25 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Lgp-cy-p6A">
-                                        <rect key="frame" x="213" y="0.0" width="107" height="30"/>
+                                        <rect key="frame" x="213.5" y="0.0" width="107" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                        <state key="normal" title="Evenemang">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scrollScrollViewToNews:" destination="0yp-G1-obt" eventType="touchUpInside" id="OxT-TL-dWE"/>
+                                            <action destination="0yp-G1-obt" eventType="touchUpInside" id="Gp3-A5-pFj">
+                                                <string key="selector">selfscrollViewscrollRectToVisibleCGRectMake3200320480animatedYESselfscrollViewscrollRectToVisibleCGRectMake3200320480animatedYESscrollScrollViewtoNews:</string>
+                                            </action>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="0TR-Ay-OeG">
+                                        <rect key="frame" x="338" y="0.0" width="82.5" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
                                         <state key="normal" title="Nyheter">
@@ -236,8 +254,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="scrollScrollViewToNews:" destination="0yp-G1-obt" eventType="touchUpInside" id="OxT-TL-dWE"/>
-                                            <action destination="0yp-G1-obt" eventType="touchUpInside" id="Gp3-A5-pFj">
+                                            <action selector="scrollScrollViewToNews:" destination="0yp-G1-obt" eventType="touchUpInside" id="6y5-zZ-vey"/>
+                                            <action destination="0yp-G1-obt" eventType="touchUpInside" id="FMP-Yz-9h2">
                                                 <string key="selector">selfscrollViewscrollRectToVisibleCGRectMake3200320480animatedYESselfscrollViewscrollRectToVisibleCGRectMake3200320480animatedYESscrollScrollViewtoNews:</string>
                                             </action>
                                         </connections>
@@ -285,11 +303,11 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="97" id="AX2-SK-ipj" userLabel="HorizontalPlaceCell" customClass="HorizontalPlaceCell">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="97" id="AX2-SK-ipj" userLabel="HorizontalPlaceCell" customClass="HorizontalPlaceCell">
                                                 <rect key="frame" x="0.0" y="22" width="103" height="97"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="96"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon2.png" id="5jr-OK-o5H">
@@ -319,7 +337,7 @@
                                         </connections>
                                     </tableView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="750-0H-GAd" userLabel="EventsTableView">
-                                        <rect key="frame" x="8" y="10" width="305" height="375"/>
+                                        <rect key="frame" x="648" y="10" width="305" height="375"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -368,15 +386,15 @@
                                         </connections>
                                     </tableView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="oiw-lS-wJl" userLabel="NewsTableView">
-                                        <rect key="frame" x="648" y="10" width="305" height="365"/>
+                                        <rect key="frame" x="968" y="10" width="305" height="365"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="110" id="ico-OM-WfM" customClass="RSSCell">
-                                                <rect key="frame" x="0.0" y="22" width="320" height="110"/>
+                                                <rect key="frame" x="0.0" y="22" width="305" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="109"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="109"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="2lE-s1-DQD" userLabel="titleLabel">
@@ -479,6 +497,14 @@
                                             <outlet property="delegate" destination="gg6-Dy-Lrf" id="hKc-hO-nZv"/>
                                         </connections>
                                     </tableView>
+                                    <webView contentMode="scaleToFill" scalesPageToFit="YES" id="eY8-2b-ttu" userLabel="StudentInfoWebView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="x4b-pl-120" id="tKM-od-Yf1"/>
+                                        </connections>
+                                    </webView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93538743622448983" green="0.93538743622448983" blue="0.93538743622448983" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -492,10 +518,11 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="eventsSection" destination="jry-pA-Fub" id="lAr-7T-Lgb"/>
+                        <outlet property="eventsSection" destination="Lgp-cy-p6A" id="FK9-t0-tVF"/>
                         <outlet property="eventsTableView" destination="0Vl-j7-3dP" id="YSA-ZP-EqA"/>
-                        <outlet property="homeSection" destination="JeI-8s-Vcw" id="Aom-Jf-pZp"/>
-                        <outlet property="infoSection" destination="Lgp-cy-p6A" id="u9a-9c-E1U"/>
+                        <outlet property="homeSection" destination="JeI-8s-Vcw" id="udh-t7-Hh6"/>
+                        <outlet property="infoSection" destination="jry-pA-Fub" id="15r-lq-B3X"/>
+                        <outlet property="newsSection" destination="0TR-Ay-OeG" id="AzR-AT-3GU"/>
                         <outlet property="newsTableView" destination="yGL-6V-YLl" id="Pth-IN-5qy"/>
                         <outlet property="placesContainerView" destination="g1g-Rl-FDr" id="6yU-cU-yoq"/>
                         <outlet property="placesShadowView" destination="zzG-cf-wzt" id="RyN-2F-2yH"/>
@@ -504,6 +531,7 @@
                         <outlet property="schemaTableView" destination="gg6-Dy-Lrf" id="Tc7-WU-Uyh"/>
                         <outlet property="scrollView" destination="exo-hp-BSP" id="z30-MQ-zlh"/>
                         <outlet property="sectionView" destination="ANz-z1-G0I" id="POt-Gz-HMe"/>
+                        <outlet property="studentInfoWebView" destination="x4b-pl-120" id="LaO-f2-6BO"/>
                     </connections>
                 </viewController>
                 <customObject id="gg6-Dy-Lrf" customClass="SchemaTableView">
@@ -524,6 +552,11 @@
                 <customObject id="yGL-6V-YLl" customClass="NewsTableView">
                     <connections>
                         <outlet property="tableView" destination="oiw-lS-wJl" id="wzZ-zk-16o"/>
+                    </connections>
+                </customObject>
+                <customObject id="x4b-pl-120" customClass="WebViewObject">
+                    <connections>
+                        <outlet property="webView" destination="eY8-2b-ttu" id="UMh-34-KIQ"/>
                     </connections>
                 </customObject>
             </objects>
@@ -649,6 +682,7 @@
                 <relationship kind="outlet" name="eventsTableView" candidateClass="EventsTableView"/>
                 <relationship kind="outlet" name="homeSection" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="infoSection" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="newsSection" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="newsTableView" candidateClass="NewsTableView"/>
                 <relationship kind="outlet" name="placesContainerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="placesShadowView" candidateClass="UIView"/>
@@ -657,6 +691,7 @@
                 <relationship kind="outlet" name="schemaTableView" candidateClass="SchemaTableView"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="sectionView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="studentInfoWebView" candidateClass="WebViewObject"/>
             </relationships>
         </class>
         <class className="MapViewController" superclassName="UIViewController">
@@ -716,6 +751,12 @@
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
+        <class className="WebViewObject" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewObject.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -724,6 +765,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="bL6-q9-5nG"/>
-        <segue reference="zms-tG-ZxX"/>
+        <segue reference="Qq4-a3-1xB"/>
     </inferredMetricsTieBreakers>
 </document>
