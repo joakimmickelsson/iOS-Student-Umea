@@ -13,14 +13,14 @@
 		55247656159E74CC00084226 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247655159E74CC00084226 /* CoreData.framework */; };
 		5524765C159E74CC00084226 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5524765A159E74CC00084226 /* InfoPlist.strings */; };
 		5524765E159E74CC00084226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524765D159E74CC00084226 /* main.m */; };
-		55247662159E74CC00084226 /* AppDelegate2.m in Sources */ = {isa = PBXBuildFile; fileRef = 55247661159E74CC00084226 /* AppDelegate2.m */; };
-		55247665159E74CC00084226 /* Umea_Student2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55247663159E74CC00084226 /* Umea_Student2.xcdatamodeld */; };
 		5524766D159E74CC00084226 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5524766C159E74CC00084226 /* SenTestingKit.framework */; };
 		5524766E159E74CC00084226 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5524764F159E74CC00084226 /* UIKit.framework */; };
 		5524766F159E74CC00084226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247651159E74CC00084226 /* Foundation.framework */; };
 		55247670159E74CC00084226 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247655159E74CC00084226 /* CoreData.framework */; };
 		55247678159E74CD00084226 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55247676159E74CD00084226 /* InfoPlist.strings */; };
 		5524767B159E74CD00084226 /* Umea_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524767A159E74CD00084226 /* Umea_StudentTests.m */; };
+		55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
+		55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
 		557F63E8159E773B00A13BAA /* CheckInternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E3159E773B00A13BAA /* CheckInternetConnection.m */; };
 		557F63E9159E773B00A13BAA /* CheckInternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E3159E773B00A13BAA /* CheckInternetConnection.m */; };
 		557F63EA159E773B00A13BAA /* EventsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E4159E773B00A13BAA /* EventsTableView.m */; };
@@ -136,8 +136,6 @@
 		557F64AD159E78B400A13BAA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557F64AC159E78B400A13BAA /* CoreMotion.framework */; };
 		557F64B4159E798B00A13BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B3159E798B00A13BAA /* AppDelegate.m */; };
 		557F64B5159E798B00A13BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B3159E798B00A13BAA /* AppDelegate.m */; };
-		557F64B8159E7A1E00A13BAA /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B6159E7A1E00A13BAA /* Umea_Student.xcdatamodeld */; };
-		557F64B9159E7A1E00A13BAA /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B6159E7A1E00A13BAA /* Umea_Student.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,15 +158,13 @@
 		5524765B159E74CC00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5524765D159E74CC00084226 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5524765F159E74CC00084226 /* Umea Student-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Umea Student-Prefix.pch"; sourceTree = "<group>"; };
-		55247660159E74CC00084226 /* AppDelegate2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate2.h; sourceTree = "<group>"; };
-		55247661159E74CC00084226 /* AppDelegate2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate2.m; sourceTree = "<group>"; };
-		55247664159E74CC00084226 /* Umea_Student2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Umea_Student2.xcdatamodel; sourceTree = "<group>"; };
 		5524766B159E74CC00084226 /* Umea StudentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Umea StudentTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5524766C159E74CC00084226 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		55247675159E74CD00084226 /* Umea StudentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Umea StudentTests-Info.plist"; sourceTree = "<group>"; };
 		55247677159E74CD00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55247679159E74CD00084226 /* Umea_StudentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Umea_StudentTests.h; sourceTree = "<group>"; };
 		5524767A159E74CD00084226 /* Umea_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Umea_StudentTests.m; sourceTree = "<group>"; };
+		55582350159E7EB30091D848 /* Student_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student_App.xcdatamodel; sourceTree = "<group>"; };
 		557F63E3159E773B00A13BAA /* CheckInternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInternetConnection.m; sourceTree = "<group>"; };
 		557F63E4159E773B00A13BAA /* EventsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableView.m; sourceTree = "<group>"; };
 		557F63E5159E773B00A13BAA /* FetchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchRequest.m; sourceTree = "<group>"; };
@@ -253,7 +249,6 @@
 		557F64AC159E78B400A13BAA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		557F64B2159E797A00A13BAA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557F64B3159E798B00A13BAA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		557F64B7159E7A1E00A13BAA /* Student_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student_App.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,10 +335,7 @@
 		55247658159E74CC00084226 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				55247660159E74CC00084226 /* AppDelegate2.h */,
-				55247661159E74CC00084226 /* AppDelegate2.m */,
-				557F64B6159E7A1E00A13BAA /* Umea_Student.xcdatamodeld */,
-				55247663159E74CC00084226 /* Umea_Student2.xcdatamodeld */,
+				5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */,
 				55247659159E74CC00084226 /* Umea Student-Info.plist */,
 				5524765A159E74CC00084226 /* InfoPlist.strings */,
 				5524765D159E74CC00084226 /* main.m */,
@@ -630,8 +622,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5524765E159E74CC00084226 /* main.m in Sources */,
-				55247662159E74CC00084226 /* AppDelegate2.m in Sources */,
-				55247665159E74CC00084226 /* Umea_Student2.xcdatamodeld in Sources */,
 				557F63E8159E773B00A13BAA /* CheckInternetConnection.m in Sources */,
 				557F63EA159E773B00A13BAA /* EventsTableView.m in Sources */,
 				557F63EC159E773B00A13BAA /* FetchRequest.m in Sources */,
@@ -655,7 +645,7 @@
 				557F6421159E774D00A13BAA /* TableViewController.m in Sources */,
 				557F6423159E774D00A13BAA /* WebViewController.m in Sources */,
 				557F64B4159E798B00A13BAA /* AppDelegate.m in Sources */,
-				557F64B8159E7A1E00A13BAA /* Umea_Student.xcdatamodeld in Sources */,
+				55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +677,7 @@
 				557F6422159E774D00A13BAA /* TableViewController.m in Sources */,
 				557F6424159E774D00A13BAA /* WebViewController.m in Sources */,
 				557F64B5159E798B00A13BAA /* AppDelegate.m in Sources */,
-				557F64B9159E7A1E00A13BAA /* Umea_Student.xcdatamodeld in Sources */,
+				55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,22 +845,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		55247663159E74CC00084226 /* Umea_Student2.xcdatamodeld */ = {
+		5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				55247664159E74CC00084226 /* Umea_Student2.xcdatamodel */,
+				55582350159E7EB30091D848 /* Student_App.xcdatamodel */,
 			);
-			currentVersion = 55247664159E74CC00084226 /* Umea_Student2.xcdatamodel */;
-			path = Umea_Student2.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		557F64B6159E7A1E00A13BAA /* Umea_Student.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				557F64B7159E7A1E00A13BAA /* Student_App.xcdatamodel */,
-			);
-			currentVersion = 557F64B7159E7A1E00A13BAA /* Student_App.xcdatamodel */;
+			currentVersion = 55582350159E7EB30091D848 /* Student_App.xcdatamodel */;
 			path = Umea_Student.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
