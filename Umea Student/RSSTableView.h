@@ -11,6 +11,7 @@
 #import "RSS.h"
 #import "RSSCell.h"
 #import "WebViewController.h"
+#import "WebViewObject.h"
 
 @interface RSSTableView : NSObject <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate>
 
@@ -32,9 +33,15 @@
 
 @property (nonatomic,strong) NSString *tableViewIsLoaded;
 
+@property (nonatomic,strong) UITableView *savedTableView;
+
+@property (nonatomic,strong) UIView *containerView;
 
 @property (nonatomic,strong) RSSCell *cell;
 
 -(void)setupRSSTableView: (NSString *)urlString;
+-(void)roundOfCorners;
+-(void)stopSpinner;
+
 
 @end

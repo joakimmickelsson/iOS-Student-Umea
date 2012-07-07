@@ -12,11 +12,12 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface WebViewObject : NSObject <UIWebViewDelegate>
 
 @property (nonatomic,strong) IBOutlet UIWebView *webView;
 
 -(void)load:(NSString *)urlString;
-
+-(void)roundOfCorners;
 @end

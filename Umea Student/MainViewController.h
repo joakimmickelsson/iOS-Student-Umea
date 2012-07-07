@@ -13,7 +13,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PlacesHandler.h"
 #import "Schema.h"
-#import "SchemaTableView.h"
 #import "PlacesTableView.h"
 #import "WebViewController.h"
 #import "FetchRequest.h"
@@ -23,6 +22,7 @@
 #import "EventsTableView.h"
 #import "NewsTableView.h"
 #import "WebViewObject.h"
+#import "SchemaTableView.h"
 
 @interface MainViewController : UIViewController <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
@@ -39,20 +39,25 @@
 @property (nonatomic,strong) IBOutlet WebViewObject *studentInfoWebView;
 
 @property (nonatomic,strong) IBOutlet SchemaTableView *schemaTableView;
+
 @property (nonatomic,strong) IBOutlet UIView *schemaShadowView;
 
 @property (nonatomic,strong) IBOutlet UIView *placesContainerView;
 @property (nonatomic,strong) IBOutlet PlacesTableView *placesTableView;
 @property (nonatomic,strong) IBOutlet UIView *placesShadowView;
 
+
 @property (nonatomic,strong) IBOutlet EventsTableView *eventsTableView;
+@property (nonatomic,strong) IBOutlet UIView *eventsContainerView;
+
 @property (nonatomic,strong) IBOutlet NewsTableView *newsTableView;
+@property (nonatomic,strong) IBOutlet UIView *newsContainerView;
 
 
 
 -(void)setUpPlacesContainer;
 -(void)setUpShadows;
--(void)loadMainViewComponents:(id)object;
+-(void)applikationIsBackToForeGround:(id)object;
 -(void)downLoadPlaces;
 -(void)setupPlacesTableView;
 -(void)setupSchemaTableView;
@@ -61,5 +66,7 @@
 - (IBAction)scrollScrollViewToEvents:(id)sender;
 - (IBAction)scrollScrollViewToHome:(id)sender;
 - (IBAction)scrollScrollViewToNews:(id)sender;
+- (IBAction)scrollScrollViewToStudentInfo:(id)sender;
+
 
 @end

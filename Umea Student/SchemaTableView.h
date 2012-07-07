@@ -12,7 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "Schema.h"
-#import "SchemaViewController.h"
+#import "FetchRequest.h"
+#import "SchedulesViewController.h"
 
 @interface SchemaTableView : NSObject  <UITableViewDelegate, UITableViewDataSource>
 

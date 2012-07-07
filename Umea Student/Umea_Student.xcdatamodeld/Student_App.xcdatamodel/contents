@@ -12,14 +12,16 @@
         <attribute name="uniqueId" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="Schema" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kursid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kurskod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kursnamn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stored" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="uniqueId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Place" positionX="196" positionY="144" width="128" height="135"/>
-        <element name="Schema" positionX="61" positionY="144" width="128" height="105"/>
         <element name="LastUpdate" positionX="126" positionY="189" width="128" height="60"/>
+        <element name="Place" positionX="196" positionY="144" width="128" height="135"/>
+        <element name="Schema" positionX="61" positionY="144" width="128" height="135"/>
     </elements>
 </model>

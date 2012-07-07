@@ -20,8 +20,27 @@
 
 @synthesize initialCategorySortString;
 
+
+-(IBAction)pushBack:(id)sender{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
+    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"backButton.png"] forState:UIControlStateNormal];
+    
+    [button addTarget:self action:@selector(pushBack:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [button setFrame:CGRectMake(0, 0, 32, 32)];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+
+    
     
     self.navigationItem.title = nil;
     

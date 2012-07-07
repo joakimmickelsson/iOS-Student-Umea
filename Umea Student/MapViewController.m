@@ -12,6 +12,7 @@
  
  */
 
+
 #import "MapViewController.h"
 
 @interface MapViewController ()
@@ -27,6 +28,14 @@
 @synthesize managedObjectContext;
 @synthesize initialCategorySortString;
 @synthesize backFromPlacesList;
+
+-(IBAction)pushBack:(id)sender{
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
+
 
 -(void)updateMapView
 {
@@ -65,6 +74,16 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
+    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"backButton.png"] forState:UIControlStateNormal];
+    
+    [button addTarget:self action:@selector(pushBack:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [button setFrame:CGRectMake(0, 0, 32, 32)];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+
     if(![backFromPlacesList isEqualToString:@"YES"]){
 
 

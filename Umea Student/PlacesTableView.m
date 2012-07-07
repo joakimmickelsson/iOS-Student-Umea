@@ -46,9 +46,6 @@
     
     
     self.tableView.transform = CGAffineTransformMakeRotation(M_PI_2);
-    
-   
-    
       
     NSManagedObjectContext* moc = [(AppDelegate*)[UIApplication sharedApplication].delegate managedObjectContext];
     
@@ -60,14 +57,11 @@
     
     NSPredicate *predicate = nil;
     
-    
     [self searchDataBase: [FetchRequest setupFetchRequest:@"Place" :predicate :sortDescriptors :moc] :@"type" :nil];
     
     [self.tableView reloadData];
       
 }
-
-
 
 - (void)scrollViewDidScroll:(UITableView *)sender {
     

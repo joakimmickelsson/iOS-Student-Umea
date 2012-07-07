@@ -19,6 +19,7 @@
 #import "HorizontalPlaceCell.h"
 #import "TableViewController.h"
 #import "PlacesSearchViewController.h"
+#import "MainViewController.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 

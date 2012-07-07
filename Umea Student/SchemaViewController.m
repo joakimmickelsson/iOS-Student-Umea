@@ -45,6 +45,15 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    request.entity = [NSEntityDescription entityForName:@"Schema" inManagedObjectContext:[(AppDelegate*)[UIApplication sharedApplication].delegate managedObjectContext]];
+        
+    
+
+    
+    
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     [spinner startAnimating];
     
@@ -93,7 +102,7 @@
     
     Schema *schema = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = schema.name;
+    cell.textLabel.text = schema.kursnamn;
     
     cell.detailTextLabel.text = schema.stored;
     
@@ -139,7 +148,7 @@
     
     request.entity = [NSEntityDescription entityForName:@"Schema" inManagedObjectContext:[(AppDelegate*)[UIApplication sharedApplication].delegate managedObjectContext]];
     
-    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", schema.name];
+    request.predicate = [NSPredicate predicateWithFormat:@"name == %@", schema.kursnamn];
     
     NSError *error = nil;
     
@@ -156,18 +165,18 @@
                 
         storedSchema = [NSEntityDescription insertNewObjectForEntityForName:@"Schema" inManagedObjectContext:[(AppDelegate*)[UIApplication sharedApplication].delegate managedObjectContext]];
         
-        storedSchema.name = schema.name;
-        storedSchema.uniqueId = schema.uniqueId;
+        storedSchema.kursnamn = schema.kursnamn;
+        storedSchema.kursid = schema.kursid;
         storedSchema.url = schema.url;
         storedSchema.stored = @"Mina Scheman";
 
-        NSLog(@"storing schema%@",storedSchema.name);
+        NSLog(@"storing schema%@",storedSchema.kursnamn);
   
     }
     
     else if(storedSchema){
         
-        NSLog(@"deleting schema%@",schema.name);
+        NSLog(@"deleting schema%@",schema.kursnamn);
 
             [[(AppDelegate*)[UIApplication sharedApplication].delegate managedObjectContext] deleteObject:storedSchema];
 

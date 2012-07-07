@@ -18,14 +18,13 @@
 
 +(BOOL)checkInternetConnection: (NSString *)title :(NSString *)message
 {
-    
-    NSLog(@"vafan");
+    NSLog(@"checking internet connection");
+
 
     NSError *error = nil;
     
     NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.google.com"] encoding:NSASCIIStringEncoding error:&error];
     
-    NSLog(@"efter");
 
     if(!URLString)
     {

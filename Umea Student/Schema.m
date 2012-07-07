@@ -13,7 +13,12 @@
 
 @implementation Schema
 
-@synthesize uniqueId,name,url;
+@synthesize hp;
+@synthesize kursid;
+@synthesize kurskod;
+@synthesize kursnamn;
+@synthesize startvecka;
+@synthesize url;
 @synthesize stored;
 
 @end

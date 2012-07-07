@@ -44,13 +44,16 @@ return nil;
         NSLog(@"[%@ saveContext] Error saving context: Error = %@, details = %@",[self class], saveError,saveError.userInfo);
     }        
     else {
+        
+        [LastUpdate setLastUpdate];
+
         NSLog(@"Database Saved");
         
     }
 }   
 -(void)savePlacesToDatabaseContext: (NSArray *)placesarray {
   
-    
+    if(placesarray){
     
     NSArray *placeTypes = [[NSArray alloc] initWithObjects:@"",@"Sal",@"Hus",@"",@"Mat och Fik",@"Affärer",@"Parkeringar",@"Busshållplatser",@"Campus",@"Datorsalar",@"Grupprum",@"Konferensrum",@"Annat",@"NUS",@"Adress",@"Mikrovågsugnar",@"Service",@"Mässa",@"Cykelpumpar",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",nil ];                      
     
@@ -109,12 +112,17 @@ return nil;
             
         }
         
+        
         [self saveDatabase];
     
 
 
     
-
+    }
+    
+    else{
+        NSLog(@"No places array - Indicating No Internet Download - No Internet Connection");
+    }
 }
     
 

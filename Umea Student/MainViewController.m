@@ -11,7 +11,6 @@
 
 #import "MainViewController.h"
 
-
 @interface MainViewController ()
 
 @end
@@ -32,54 +31,74 @@
 @synthesize newsTableView;
 @synthesize newsSection;
 @synthesize studentInfoWebView;
+@synthesize eventsContainerView;
+@synthesize newsContainerView;
+
 
 - (void)viewDidLoad {
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(loadMainViewComponents:) 
+                                             selector:@selector(applikationIsBackToForeGround:) 
                                                  name:@"AppEnteredForeground" 
                                                object:nil];
+    
+    //Ställer in appens huvudfönster
+    [scrollView setContentSize:CGSizeMake(1280,scrollView.frame.size.height)];
+    
+    //Scrolla scrollviewen till hemskärmen.
+    
+    self.scrollView.pagingEnabled = YES;
+    
+    [self scrollScrollViewToHome:nil];
+    
+    //[self.scrollView scrollRectToVisible:CGRectMake(320, 0, 320, 480) animated:YES];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    NSLog(@"VIEW DID APPEAR");
     
-        
+    
+
     if([LastUpdate isTheAppRunningForTheFirstTime]){
-        NSLog(@"first is the apprunningfor the first time");
-        
-        [self loadMainViewComponents:nil];
-        
+        NSLog(@"First Time Running");
+
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         
         [defaults setBool:NO forKey:@"studentAppFirstTimeUse"];
         
         [defaults synchronize];
+        
     }
     
-    if([LastUpdate isTheAppRunningNewVersion] ){
-        NSLog(@"New version");
+   else if([LastUpdate isTheAppRunningNewVersion] ){
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         
         [LastUpdate upgradeVersion];
         
         [defaults synchronize];
+                NSLog(@"New Version");
+
         
-        [self loadMainViewComponents:nil];
-        
+       
+
     }
     
-    else{
     
-        [self.studentInfoWebView load:@"http://google.se"];
-            
-    }
+    NSLog(@"Loading Student Info");
+
+    [self.studentInfoWebView load:@"http://google.se"];
+
     
+    NSLog(@"VIEW DID APPEAR --------> DONE");
+
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    
+    NSLog(@"VIEW WILL APPEAR");
+
     [self setupSchemaTableView];
     
     [self setupPlacesTableView];
@@ -88,6 +107,24 @@
     
     self.eventsTableView.headerTitle = @"Evenemang";
     self.newsTableView.headerTitle = @"Nyheter";
+    
+    [self.newsTableView roundOfCorners];
+    [self.eventsTableView roundOfCorners];
+    [self.studentInfoWebView roundOfCorners];
+
+    self.eventsContainerView.layer.cornerRadius = 10;
+    self.eventsContainerView.layer.borderWidth = 0.1;
+    self.eventsContainerView.layer.borderColor = [UIColor blackColor].CGColor;
+    
+    self.newsContainerView.layer.cornerRadius = 10;
+    self.newsContainerView.layer.borderWidth = 0.1;
+    self.newsContainerView.layer.borderColor = [UIColor blackColor].CGColor;
+    
+    
+    self.studentInfoWebView.webView.frame = CGRectMake(8, 10, 305, 375);
+    
+
+    NSLog(@"VIEW WILL APPEAR ------> DONE");
 
 }
 
@@ -96,7 +133,7 @@
 //Scrollar listan till början (egentligen slutet på listan, men listan är snedvriden så första elementet blir egentligen det sista.
 
 -(void)setupPlacesTableView{
-    NSLog(@"setupplaces");
+    NSLog(@"Setting up places Table View");
     
     [self.placesTableView setUpPlacesTableView];
     [self setUpPlacesContainer];
@@ -107,8 +144,12 @@
         
         [self.placesTableView.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
         
-        NSLog(@"fetched stämmer");
+        NSLog(@"Det Finns Sparade Platser i Databasen");
     }    
+    else { 
+        NSLog(@"Det Finns INGA Sparade Platser i Databasen");
+
+    }
     
     self.placesTableView.navigationController = self.navigationController;
     
@@ -138,49 +179,66 @@
 
 -(void)setupEventsAndNewsTableViews{
     
+    
+    
 
-
-
-    NSLog(@"downloading eventsand news");
     dispatch_queue_t eventsAndNewsQueue = dispatch_queue_create("Downloading Events and News", NULL);
     
     dispatch_async(eventsAndNewsQueue, ^{
         
         //Ställer in evenemang och nyhetstableviewna om internet finns flr att hämta rss data.
-        NSLog(@"before");
-        
+ NSLog(@"Checking internet for events and news");
         if([CheckInternetConnection checkInternetConnection:@"Inget Internet" :@"Kan inte hämta evenemang och nyheter"])
         {
-            
-            NSLog(@"after");
-            
+                        
             if(![self.eventsTableView.tableViewIsLoaded isEqualToString:@"YES"]){
                 
-                [self.eventsTableView setupEventsTableView]; 
+                NSLog(@"Downloading Events");
                 
-                self.eventsTableView.tableViewIsLoaded = @"YES";
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
+                    [self.eventsTableView.spinner startAnimating];
+                    
+                });
+
+                [self.eventsTableView setupEventsTableView]; 
+                
+                //  self.eventsTableView.tableViewIsLoaded = @"YES";
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [self.eventsTableView stopSpinner];
                     [self.eventsTableView.tableView reloadData];
                     
                 });
-                
             }
             
             if(![self.newsTableView.tableViewIsLoaded isEqualToString:@"YES"]){
                 
+                NSLog(@"Downloading News");
 
-                [self.newsTableView setupNewsTableView];
-                
-                self.newsTableView.tableViewIsLoaded = @"YES";
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    [self.newsTableView.tableView reloadData];
+                    [self.eventsTableView.spinner startAnimating];
                     
                 });
                 
+                [self.newsTableView setupNewsTableView];
+                
+                //   self.newsTableView.tableViewIsLoaded = @"YES";
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    
+                    [self.newsTableView stopSpinner];
+                    
+                    [self.newsTableView.tableView reloadData];
+                    
+                    
+                });
+                
+                        
                 
             }
             
@@ -211,26 +269,21 @@
 }
 
 
-- (void)loadMainViewComponents:(id)object{
+- (void)applikationIsBackToForeGround:(id)object{
+    NSLog(@"applikationIsBackToForeGround");
+
+
     
-    //Ställer in appens huvudfönster
-    [scrollView setContentSize:CGSizeMake(1280,scrollView.frame.size.height)];
+      [self setupEventsAndNewsTableViews];
     
+       [self setUpShadows];
     
-    //Scrolla scrollviewen till hemskärmen.
-    [self.scrollView scrollRectToVisible:CGRectMake(320, 0, 320, 480) animated:NO];
+       [self downLoadPlaces]; 
     
-    self.scrollView.pagingEnabled = YES;
-    
-    [self setupEventsAndNewsTableViews];
-    
-    [self setUpShadows];
-    
-    [self downLoadPlaces]; 
-    
-    [self setupPlacesTableView];
-    [self.placesTableView.tableView reloadData];
-    
+    //   [self setupPlacesTableView];
+    //  [self.placesTableView.tableView reloadData];
+    NSLog(@"applikationIsBackToForeGround -------> DONE");
+
     //Skuggor för vissa element
     
     
@@ -240,11 +293,10 @@
 -(void)downLoadPlaces{    
     
     //Kikar om platerna ska uppdateras och uppdaterar dom om de ska uppdateras.
+
     if([LastUpdate shouldUpdateLastUpdateDate]){
         
-        
-        NSLog(@"lshould update");
-        
+            
         //Sätter en spinner uppe i hörnet
         
         if(self.navigationItem.rightBarButtonItem == nil) {
@@ -260,13 +312,13 @@
         
         dispatch_async(downloadQueue, ^{
             
+            NSLog(@"Checking Internet for Places");
             if([CheckInternetConnection checkInternetConnection:@"Inget Internet" :@"Kan inte uppdatera platsinformation"])
             {
                 
                 PlacesHandler *placesHandler = [[PlacesHandler alloc] init];
                 
                 [placesHandler savePlacesToDatabaseContext:[placesHandler getPlacesFromWeb]];
-                NSLog(@"places saved");
                 
                 //Tar bort spinnern. Detta måste göras i main_queue() eftersom det rör gränssnittet.
                 
@@ -301,25 +353,8 @@
         
         
         
-        [LastUpdate setLastUpdate];
         
     }
-    
-    else{ 
-        
-        [self setupPlacesTableView];
-        
-        [self.placesTableView.tableView reloadData];
-            
-            
-
-        
-        NSLog(@"no update required");
-        
-        
-    }
-    
-    
     
 }
 
@@ -344,7 +379,7 @@
     
 }
 
-- (IBAction)scrollScrollViewToEvents:(id)sender{
+- (IBAction)scrollScrollViewToStudentInfo:(id)sender{
     
     [self.scrollView scrollRectToVisible:CGRectMake(0, 0, 320, 480) animated:YES];
 }
@@ -357,11 +392,20 @@
 }
 
 
-- (IBAction)scrollScrollViewToNews:(id)sender{
+- (IBAction)scrollScrollViewToEvents:(id)sender{
     
     [self.scrollView scrollRectToVisible:CGRectMake(640, 0, 320, 480) animated:YES];
     
 }
+
+
+- (IBAction)scrollScrollViewToNews:(id)sender{
+    
+    [self.scrollView scrollRectToVisible:CGRectMake(960, 0, 320, 480) animated:YES];
+    
+}
+
+
 
 
 
@@ -392,44 +436,7 @@
         webViewController.urlString = schema.url ;
         
     }
-    
-    else if ([segue.identifier isEqualToString:@"fromEventsToWebViewSegue"]) 
-    {
-        
-        WebViewController *webViewController = (WebViewController *) segue.destinationViewController;
-        
-        
-        NSIndexPath *indexPath = [self.eventsTableView.tableView indexPathForSelectedRow];
-        
-        RSS *newsItem = [self.eventsTableView.rssOutputData objectAtIndex:indexPath.row];
-        
-        NSArray *listItems = [newsItem.url componentsSeparatedByString:@"?eventId="];
-        
-        
-        NSLog(@"%@",[listItems lastObject]);
-        
-        webViewController.urlString = [@"http://api.eks.nu/evenemang.php?eventId=" stringByAppendingString:[listItems lastObject]];
-        
-        NSLog(@"%@",webViewController.urlString);
-        
-    }
-    
-    else if ([segue.identifier isEqualToString:@"fromNewsToWebViewSegue"]) 
-    {
-        
-        WebViewController *webViewController = (WebViewController *) segue.destinationViewController;
-        
-        NSIndexPath *indexPath = [self.newsTableView.tableView indexPathForSelectedRow];
-        
-        RSS *newsItem = [self.newsTableView.rssOutputData objectAtIndex:indexPath.row];
-        
-        NSArray *listItems = [newsItem.url componentsSeparatedByString:@"?eventId="];
-        
-        webViewController.urlString = [@"http://api.eks.nu/nyheter.php?eventId=" stringByAppendingString:[listItems lastObject]];
-        
-        
-    }
-    
+
     
 }
 

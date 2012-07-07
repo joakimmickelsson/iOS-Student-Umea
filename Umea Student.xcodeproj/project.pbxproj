@@ -19,10 +19,10 @@
 		55247670159E74CC00084226 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55247655159E74CC00084226 /* CoreData.framework */; };
 		55247678159E74CD00084226 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55247676159E74CD00084226 /* InfoPlist.strings */; };
 		5524767B159E74CD00084226 /* Umea_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524767A159E74CD00084226 /* Umea_StudentTests.m */; };
+		552B537C15A86FB300090380 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B537B15A86FB300090380 /* exit.png */; };
+		552B537D15A86FB300090380 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B537B15A86FB300090380 /* exit.png */; };
 		5534BBB7159F83B9009E9E8A /* ToFiX.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB6159F83B9009E9E8A /* ToFiX.rtf */; };
 		5534BBB8159F83B9009E9E8A /* ToFiX.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB6159F83B9009E9E8A /* ToFiX.rtf */; };
-		5534BBBA159F865A009E9E8A /* StudentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB9159F865A009E9E8A /* StudentInfo.xib */; };
-		5534BBBB159F865A009E9E8A /* StudentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534BBB9159F865A009E9E8A /* StudentInfo.xib */; };
 		5534BBCA159F9BD6009E9E8A /* WebViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBC9159F9BD6009E9E8A /* WebViewObject.m */; };
 		5534BBCB159F9BD6009E9E8A /* WebViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBC9159F9BD6009E9E8A /* WebViewObject.m */; };
 		5534BBCE159FB497009E9E8A /* RSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBCD159FB497009E9E8A /* RSSTableView.m */; };
@@ -144,6 +144,13 @@
 		557F64AD159E78B400A13BAA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557F64AC159E78B400A13BAA /* CoreMotion.framework */; };
 		557F64B4159E798B00A13BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B3159E798B00A13BAA /* AppDelegate.m */; };
 		557F64B5159E798B00A13BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B3159E798B00A13BAA /* AppDelegate.m */; };
+		55B5225B15A3A046000E2A6D /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 55B5225A15A3A046000E2A6D /* bg.jpeg */; };
+		55E2083815A754DF005EF789 /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083715A754DF005EF789 /* SchedulesViewController.m */; };
+		55E2083915A754DF005EF789 /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083715A754DF005EF789 /* SchedulesViewController.m */; };
+		55E2083C15A75868005EF789 /* JSONSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083B15A75868005EF789 /* JSONSchema.m */; };
+		55E2083D15A75868005EF789 /* JSONSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083B15A75868005EF789 /* JSONSchema.m */; };
+		55E2083F15A850D6005EF789 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E2083E15A850D6005EF789 /* backButton.png */; };
+		55E2084015A850D6005EF789 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E2083E15A850D6005EF789 /* backButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,8 +179,8 @@
 		55247677159E74CD00084226 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55247679159E74CD00084226 /* Umea_StudentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Umea_StudentTests.h; sourceTree = "<group>"; };
 		5524767A159E74CD00084226 /* Umea_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Umea_StudentTests.m; sourceTree = "<group>"; };
+		552B537B15A86FB300090380 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
 		5534BBB6159F83B9009E9E8A /* ToFiX.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = ToFiX.rtf; path = "Umea Student/ToFiX.rtf"; sourceTree = "<group>"; };
-		5534BBB9159F865A009E9E8A /* StudentInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentInfo.xib; sourceTree = "<group>"; };
 		5534BBC8159F9BD6009E9E8A /* WebViewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewObject.h; sourceTree = "<group>"; };
 		5534BBC9159F9BD6009E9E8A /* WebViewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewObject.m; sourceTree = "<group>"; };
 		5534BBCC159FB497009E9E8A /* RSSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSTableView.h; sourceTree = "<group>"; };
@@ -263,6 +270,12 @@
 		557F64AC159E78B400A13BAA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		557F64B2159E797A00A13BAA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557F64B3159E798B00A13BAA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55B5225A15A3A046000E2A6D /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
+		55E2083615A754DF005EF789 /* SchedulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulesViewController.h; sourceTree = "<group>"; };
+		55E2083715A754DF005EF789 /* SchedulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesViewController.m; sourceTree = "<group>"; };
+		55E2083A15A75868005EF789 /* JSONSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSchema.h; sourceTree = "<group>"; };
+		55E2083B15A75868005EF789 /* JSONSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONSchema.m; sourceTree = "<group>"; };
+		55E2083E15A850D6005EF789 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,9 +314,9 @@
 		55247640159E74CC00084226 = {
 			isa = PBXGroup;
 			children = (
+				55B5225A15A3A046000E2A6D /* bg.jpeg */,
 				5534BBB6159F83B9009E9E8A /* ToFiX.rtf */,
 				557F6428159E776300A13BAA /* iPhone_Storyboard.storyboard */,
-				5534BBB9159F865A009E9E8A /* StudentInfo.xib */,
 				55247657159E74CC00084226 /* Umea Student */,
 				55247673159E74CD00084226 /* Umea StudentTests */,
 				5524764E159E74CC00084226 /* Frameworks */,
@@ -436,10 +449,16 @@
 			children = (
 				557F643A159E777B00A13BAA /* Schema.h */,
 				557F63FC159E774D00A13BAA /* Schema.m */,
+				55E2083A15A75868005EF789 /* JSONSchema.h */,
+				55E2083B15A75868005EF789 /* JSONSchema.m */,
 				557F643B159E777B00A13BAA /* SchemaHandler.h */,
 				557F63FD159E774D00A13BAA /* SchemaHandler.m */,
 				557F643D159E777B00A13BAA /* SchemaViewController.h */,
 				557F63FF159E774D00A13BAA /* SchemaViewController.m */,
+				55E2083615A754DF005EF789 /* SchedulesViewController.h */,
+				55E2083715A754DF005EF789 /* SchedulesViewController.m */,
+				552B537B15A86FB300090380 /* exit.png */,
+				55E2083E15A850D6005EF789 /* backButton.png */,
 			);
 			name = Schema;
 			sourceTree = "<group>";
@@ -484,8 +503,8 @@
 				557F63E5159E773B00A13BAA /* FetchRequest.m */,
 				557F642F159E777B00A13BAA /* LastUpdate.h */,
 				557F63E7159E773B00A13BAA /* LastUpdate.m */,
-				557F63E3159E773B00A13BAA /* CheckInternetConnection.m */,
 				557F642B159E777B00A13BAA /* CheckInternetConnection.h */,
+				557F63E3159E773B00A13BAA /* CheckInternetConnection.m */,
 				5574E0FE159F06520061D781 /* Inherit From These */,
 			);
 			name = Helpers;
@@ -649,7 +668,9 @@
 				557F6498159E77A200A13BAA /* security.png in Resources */,
 				557F649A159E77A200A13BAA /* webcam.png in Resources */,
 				5534BBB7159F83B9009E9E8A /* ToFiX.rtf in Resources */,
-				5534BBBA159F865A009E9E8A /* StudentInfo.xib in Resources */,
+				55B5225B15A3A046000E2A6D /* bg.jpeg in Resources */,
+				55E2083F15A850D6005EF789 /* backButton.png in Resources */,
+				552B537C15A86FB300090380 /* exit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +711,8 @@
 				557F6499159E77A200A13BAA /* security.png in Resources */,
 				557F649B159E77A200A13BAA /* webcam.png in Resources */,
 				5534BBB8159F83B9009E9E8A /* ToFiX.rtf in Resources */,
-				5534BBBB159F865A009E9E8A /* StudentInfo.xib in Resources */,
+				55E2084015A850D6005EF789 /* backButton.png in Resources */,
+				552B537D15A86FB300090380 /* exit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +766,8 @@
 				55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */,
 				5534BBCA159F9BD6009E9E8A /* WebViewObject.m in Sources */,
 				5534BBCE159FB497009E9E8A /* RSSTableView.m in Sources */,
+				55E2083815A754DF005EF789 /* SchedulesViewController.m in Sources */,
+				55E2083C15A75868005EF789 /* JSONSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +802,8 @@
 				55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */,
 				5534BBCB159F9BD6009E9E8A /* WebViewObject.m in Sources */,
 				5534BBCF159FB497009E9E8A /* RSSTableView.m in Sources */,
+				55E2083915A754DF005EF789 /* SchedulesViewController.m in Sources */,
+				55E2083D15A75868005EF789 /* JSONSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

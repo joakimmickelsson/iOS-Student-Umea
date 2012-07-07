@@ -8,8 +8,8 @@
  Copyright (C) 2012 Umeå Universitet. All Rights Reserved.
  
  */
-
 #import "SchemaTableView.h"
+
 
 @implementation SchemaTableView
 
@@ -84,7 +84,7 @@
     [headerView addSubview:imageView];
     
     //Texten
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, self.tableView.bounds.size.width - 10, 15)] ;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 7, self.tableView.bounds.size.width - 10, 15)] ;
     
     if([[self.fetchedResultsController fetchedObjects] count] > 0 )
     {
@@ -100,9 +100,11 @@
     }
     
        
-    label.textColor = [UIColor whiteColor];
-    label.backgroundColor = [UIColor clearColor];
-    [label setFont:[UIFont fontWithName:@"Chalkboard SE" size:15]];
+    label.textColor         = [UIColor whiteColor];
+    label.backgroundColor   = [UIColor clearColor];
+    label.font              = [UIFont boldSystemFontOfSize:13];
+    
+    
     [headerView addSubview:label];
     
     
@@ -128,19 +130,15 @@
     NSManagedObjectContext* moc = [(AppDelegate*)[UIApplication sharedApplication].delegate managedObjectContext];
     
     NSSortDescriptor *sortDescriptor = 
-    [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    [[NSSortDescriptor alloc] initWithKey:@"kursnamn" ascending:YES];
     
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil]; 
     
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"stored == %@", @"Mina Scheman"];
-    
-    
-    [self searchDataBase: [FetchRequest setupFetchRequest:@"Schema" :predicate :sortDescriptors :moc] :@"stored" :nil];
+    [self searchDataBase: [FetchRequest setupFetchRequest:@"Schema" :nil :sortDescriptors :moc] :@"stored" :nil];
         
     if([[self.fetchedResultsController fetchedObjects] count] > 0 ){
                 
-        self.tableView.frame = CGRectMake(330,10,300, 35*[[self.fetchedResultsController fetchedObjects] count] + 30);
+        self.tableView.frame = CGRectMake(328,10,305, 35*[[self.fetchedResultsController fetchedObjects] count] + 30);
         
     }
       
@@ -148,7 +146,7 @@
     {
                 
         self.tableView.frame = CGRectMake(
-                                             330,         
+                                             328,         
                                              10, 
                                              305,
                                              65);
@@ -168,9 +166,10 @@
 -(void)addSchemaButtonPressed:(id)sender 
 {
     
-      SchemaViewController *schemaViewController = [self.navigationController.storyboard instantiateViewControllerWithIdentifier:@"Scheman"];
     
-    [self.navigationController pushViewController:schemaViewController animated:YES];
+      SchedulesViewController *schedulesViewController = [self.navigationController.storyboard instantiateViewControllerWithIdentifier:@"schemastableviewcontroller"];
+    
+    [self.navigationController pushViewController:schedulesViewController animated:YES];
 }
 
 -(void)searchDataBase: (NSFetchRequest *)fetchRequest : (NSString *)sectionNameKeyPath: (NSString *)cacheName
@@ -210,9 +209,9 @@
         
         UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
-        Schema *schema = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        JSONSchema *schema = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
-        cell.textLabel.text = schema.name;
+        cell.textLabel.text = schema.kursnamn;
         cell.userInteractionEnabled = YES;
         return cell;
 

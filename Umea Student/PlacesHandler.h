@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "Place.h"
 #import "AppDelegate.h"
+#import "LastUpdate.h"
 
 @interface PlacesHandler : NSObject
 

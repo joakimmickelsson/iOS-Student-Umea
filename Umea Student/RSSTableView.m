@@ -9,7 +9,7 @@
 #import "RSSTableView.h"
 
 @implementation RSSTableView
-
+@synthesize containerView;
 @synthesize tableView;
 @synthesize rssObject;
 @synthesize rssOutputData;
@@ -22,6 +22,8 @@
 @synthesize tableViewIsLoaded;
 @synthesize spinner;
 @synthesize headerTitle;
+@synthesize savedTableView;
+
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 
 
@@ -102,14 +104,21 @@
     //asking the xmlparser object to beggin with its parsing
     [self.xmlParserObject parse];
     
-    self.tableView.layer.cornerRadius = 10;
-    self.tableView.layer.borderWidth = 0.1;
-    self.tableView.layer.borderColor = [UIColor blackColor].CGColor;
-    
+   
+
     
     // self.tableView.layer.cornerRadius = 10;
     
     
+}
+
+
+
+-(void)roundOfCorners{
+    self.tableView.layer.cornerRadius = 10;
+    self.tableView.layer.borderWidth = 0.1;
+    self.tableView.layer.borderColor = [UIColor blackColor].CGColor;
+
 }
 
 
@@ -134,15 +143,18 @@
 	
 }
 
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *text = [[self.rssOutputData objectAtIndex:indexPath.row] description];
     
-    UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-    CGSize withinSize = CGSizeMake(self.tableView.frame.size.width, 1000);
-    CGSize size = [text sizeWithFont:font constrainedToSize:withinSize lineBreakMode:UILineBreakModeWordWrap];    
+    RSS *news = [self.rssOutputData objectAtIndex:indexPath.row];
     
-    return size.height+20;    
+    CGSize titleLabelSize = [news.title sizeWithFont:[UIFont boldSystemFontOfSize:12.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize descriptionLabelSize = [news.description sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize pubDateLabelSize = [news.pubDate sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeTailTruncation];
+    
+    return titleLabelSize.height +descriptionLabelSize.height + pubDateLabelSize.height + 15; 
 }
 
 
@@ -162,19 +174,14 @@
                 initWithStyle:UITableViewCellStyleDefault 
                 reuseIdentifier:MyIdentifier];
         
-        cell.descriptionLabel.numberOfLines = 0;
-        cell.descriptionLabel.lineBreakMode = UILineBreakModeWordWrap;
-        
-        cell.titleLabel.numberOfLines = 0;
-        cell.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
-        
-        
     }
+    
     RSS *news = [self.rssOutputData objectAtIndex:indexPath.row];
     
 	// Set up the cell
 	cell.titleLabel.text= news.title;
-    
+    cell.dateLabel.text  = news.pubDate;
+
     if(news.description == nil){
     	cell.descriptionLabel.text = news.title;
     }
@@ -182,12 +189,32 @@
     	cell.descriptionLabel.text = news.description;
         
     }
-	cell.descriptionLabel.text = news.description;
-    cell.dateLabel.text  = news.pubDate;
     
+    cell.titleLabel.numberOfLines = 0;
+        cell.descriptionLabel.numberOfLines = 0;
+    
+    CGSize titleLabelSize = [cell.titleLabel.text sizeWithFont:[UIFont boldSystemFontOfSize:12.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeWordWrap];
+    
+    CGSize descriptionLabelSize = [cell.descriptionLabel.text sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeWordWrap];
+    
+    CGSize pubDateLabelSize = [news.pubDate sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeTailTruncation];
+
+    
+    
+    cell.titleLabel.frame = CGRectMake(20, 2, 245, titleLabelSize.height);   
+
+    cell.descriptionLabel.frame = CGRectMake(20, 5 + titleLabelSize.height, 245, descriptionLabelSize.height);    
+    
+    cell.dateLabel.frame = CGRectMake(20, 5 + cell.descriptionLabel.frame.origin.y + descriptionLabelSize.height, 245, pubDateLabelSize.height);    
+    
+    
+    [cell.descriptionLabel sizeToFit];
+    [cell.titleLabel sizeToFit];
+    [cell.dateLabel sizeToFit];
+    
+       
     return cell;
     
-	
 }
 
 
@@ -224,23 +251,34 @@
     [label setFont:[UIFont fontWithName:@"Chalkboard SE" size:15]];
     [headerView addSubview:label];
     
-    //Inställningsknappen
+    
+    if(!spinner){
     
     spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    
-    [spinner startAnimating];
-    spinner.hidesWhenStopped = YES;
+        
+    [spinner setHidesWhenStopped:YES];
     
     [spinner setFrame:CGRectMake(271, 0, 30, 30)];
     
     [headerView addSubview:spinner];
     
+    NSLog(@"setting spinner");
+    }
+
+
     
     return headerView;
     
     
 }
 
+-(void)stopSpinner{
+
+    [self.spinner stopAnimating];
+
+}
+
+/*
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
@@ -267,7 +305,7 @@
         
     }
 }
-
+*/
 
 @end
 

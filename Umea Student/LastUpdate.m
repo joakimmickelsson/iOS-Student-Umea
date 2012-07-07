@@ -33,12 +33,13 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     NSString *CurrentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];
-
+    
     [defaults setObject:CurrentVersion forKey:@"studentAppVersion"];
     
     [defaults synchronize];
 
 }
+
 +(BOOL)isTheAppRunningNewVersion{
     NSLog(@"checking New version");
 
@@ -46,24 +47,21 @@
 
     NSString *appVersion = [defaults stringForKey:@"studentAppVersion"];
     
-    NSString *CurrentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];
-
-    if(appVersion == nil){
-        return YES;
-    }
-    
+    NSString *CurrentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];    
     
     if([appVersion compare:CurrentVersion] != 0)
     {
-    
+        NSLog(@"New version: YES");
+
         return YES;
     }    
     
     else {
+        NSLog(@"New version: NO");
+
         
         return NO;
-
-
+        
 }
 
 }
@@ -77,8 +75,8 @@
     
     if(appVersion == nil) 
     {
-        
-        NSLog(@"first time");    
+        NSLog(@"App Runs For First Time");
+        [self upgradeVersion]; 
         return YES;
     }
     
@@ -92,14 +90,13 @@
     
 //Kikar om platserna ska uppdateras 
 +(BOOL)shouldUpdateLastUpdateDate{
+    NSLog(@"Checking LastUpdate");
 
     NSDate *lastPlacesUpdateDate = [self getLastUpdate];
     
-    NSLog(@"lastupdate%@", lastPlacesUpdateDate);
 
     if( lastPlacesUpdateDate == nil) 
     {
-        NSLog(@"lastupdate = nil");
 
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         
@@ -107,24 +104,27 @@
 
         [defaults synchronize];
 
+        NSLog(@"Shouldupdate: YES");
+
         return YES;
     }
     else{
     
         //Kikar om senaste uppdatering var mer än 7 dagar sedan. Isåfall uppdaterar den platserna.
         
-        NSLog(@"timeIntervalSinceReferenceDate%@",lastPlacesUpdateDate);
         
         NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate: lastPlacesUpdateDate];
 
         
         if(interval > 60*60*24*7){
 
-        
+            NSLog(@"Shouldupdate: YES");
+
             return YES;
         }
     
-       
+        NSLog(@"Shouldupdate: NO");
+
         return NO;
 
         }

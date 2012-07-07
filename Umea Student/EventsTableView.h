@@ -13,8 +13,10 @@
 #import "RSSTableView.h"
 
 
-@interface EventsTableView : RSSTableView
+@interface EventsTableView : RSSTableView <UITableViewDelegate>
 
 -(void)setupEventsTableView;
+
+
 
 @end

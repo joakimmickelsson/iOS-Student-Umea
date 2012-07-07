@@ -62,9 +62,9 @@
                     
                     if(!storedSchema){
                         Schema *schema = [NSEntityDescription insertNewObjectForEntityForName:@"Schema" inManagedObjectContext:self.managedObjectContext];
-                        schema.name = [schemadata objectForKey:@"name"];
+                        schema.kursnamn = [schemadata objectForKey:@"name"];
                         schema.url = [schemadata objectForKey:@"url"];
-                        schema.uniqueId = [schemadata objectForKey:@"id"];
+                        schema.kursid = [schemadata objectForKey:@"id"];
                         schema.stored = @"Alla Scheman";
                         
                     }
@@ -123,9 +123,9 @@
                
                 Schema *schema = [NSEntityDescription insertNewObjectForEntityForName:@"Schema" inManagedObjectContext:self.managedObjectContext];
                 
-                schema.name = [schemadata objectForKey:@"name"];
+                schema.kursnamn = [schemadata objectForKey:@"name"];
                 schema.url = [schemadata objectForKey:@"url"];
-                schema.uniqueId = [schemadata objectForKey:@"id"];
+                schema.kursid = [schemadata objectForKey:@"id"];
                 
                     
                 if (error) 
