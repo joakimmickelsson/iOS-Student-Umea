@@ -9,7 +9,6 @@
 #import "RSSTableView.h"
 
 @implementation RSSTableView
-@synthesize containerView;
 @synthesize tableView;
 @synthesize rssObject;
 @synthesize rssOutputData;
@@ -22,7 +21,7 @@
 @synthesize tableViewIsLoaded;
 @synthesize spinner;
 @synthesize headerTitle;
-@synthesize savedTableView;
+@synthesize webView;
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 
@@ -115,10 +114,8 @@
 
 
 -(void)roundOfCorners{
-    self.tableView.layer.cornerRadius = 10;
-    self.tableView.layer.borderWidth = 0.1;
-    self.tableView.layer.borderColor = [UIColor blackColor].CGColor;
-
+    //  self.tableView.layer.cornerRadius = 10;
+  
 }
 
 
@@ -198,8 +195,6 @@
     CGSize descriptionLabelSize = [cell.descriptionLabel.text sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeWordWrap];
     
     CGSize pubDateLabelSize = [news.pubDate sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(245.0f, 1000) lineBreakMode:UILineBreakModeTailTruncation];
-
-    
     
     cell.titleLabel.frame = CGRectMake(20, 2, 245, titleLabelSize.height);   
 
@@ -278,34 +273,79 @@
 
 }
 
-/*
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+-(IBAction)flipBackFromWebView:(id)sender{
+    
+    [self flipToView:self.webView.superview :self.tableView];
+    
+    //  self.savedTableView = nil;
+    
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    NSLog(@"zooming");
+    //zooms content to fit thw webview
+        if ([self.webView respondsToSelector:@selector(scrollView)])
+        {
+            UIScrollView *scroll=[self.webView scrollView];
+            
+            float zoom=self.webView.bounds.size.width/scroll.contentSize.width;
+            [scroll setZoomScale:zoom animated:YES];
+        }
+
     
-    
-    
-    if ([segue.identifier isEqualToString:@"webViewSegue"]) 
-    {
+}
+
+-(void)setupwebView:(NSString *)urlString{
+
+    if(self.webView == nil){
+        self.webView = [[UIWebView alloc] initWithFrame:self.tableView.frame];
+        self.webView.delegate = self;
+        // self.tableView.layer.cornerRadius = 10;
+        //  self.tableView.layer.masksToBounds  = YES;
+        self.webView.scrollView.bounces = NO;
+        self.webView.scalesPageToFit = YES;
+        UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:[UIImage imageNamed:@"exit.png"] forState:UIControlStateNormal];
         
-        WebViewController *webViewController = (WebViewController *) segue.destinationViewController;
+        [button addTarget:self action:@selector(flipBackFromWebView:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [button setFrame:CGRectMake(self.webView.frame.size.width-32, 0, 32, 32)];
         
         
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        
-        RSS *newsItem = [rssOutputData objectAtIndex:indexPath.row];
-        
-        NSArray *listItems = [newsItem.url componentsSeparatedByString:@"?eventId="];
-        
-        
-        NSLog(@"%@",[listItems lastObject]);
-        
-        webViewController.urlString = [@"http://api.eks.nu/evenemang.php?eventId=" stringByAppendingString:[listItems lastObject]];
-        
-        NSLog(@"%@",webViewController.urlString);
+        [self.webView addSubview:button];        
         
     }
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString: urlString]
+                                               cachePolicy: NSURLRequestReloadRevalidatingCacheData
+                                           timeoutInterval: 60*60] ];
+    
+    // [self.webView scalesPageToFit];
+
 }
-*/
+
+-(void)flipToView:(UIView *)parentContainer :(UIView *)to{
+    
+    to.layer.masksToBounds = YES;
+    
+    [UIView transitionWithView:parentContainer duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft //change to whatever animation you like
+                    animations:^ { 
+                        
+                        
+                        
+                        [parentContainer addSubview:to]; 
+                        
+                        
+                    }
+                    completion:nil];
+    
+}
+
+
+
 
 @end
 

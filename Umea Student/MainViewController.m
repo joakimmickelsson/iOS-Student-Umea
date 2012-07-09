@@ -103,23 +103,17 @@
     
     [self setupPlacesTableView];
     
-    [self setUpShadows];
+    //  [self setUpShadows];
     
     self.eventsTableView.headerTitle = @"Evenemang";
     self.newsTableView.headerTitle = @"Nyheter";
     
-    [self.newsTableView roundOfCorners];
-    [self.eventsTableView roundOfCorners];
-    [self.studentInfoWebView roundOfCorners];
-
-    self.eventsContainerView.layer.cornerRadius = 10;
-    self.eventsContainerView.layer.borderWidth = 0.1;
-    self.eventsContainerView.layer.borderColor = [UIColor blackColor].CGColor;
+    //   [self.newsTableView roundOfCorners];
+    //  [self.eventsTableView roundOfCorners];
+    // [self.studentInfoWebView roundOfCorners];
     
-    self.newsContainerView.layer.cornerRadius = 10;
-    self.newsContainerView.layer.borderWidth = 0.1;
-    self.newsContainerView.layer.borderColor = [UIColor blackColor].CGColor;
-    
+    // self.newsContainerView.layer.cornerRadius = 10;
+    //  self.newsContainerView.layer.masksToBounds = YES;
     
     self.studentInfoWebView.webView.frame = CGRectMake(8, 10, 305, 375);
     
@@ -276,7 +270,7 @@
     
       [self setupEventsAndNewsTableViews];
     
-       [self setUpShadows];
+    //  [self setUpShadows];
     
        [self downLoadPlaces]; 
     
@@ -478,6 +472,7 @@
     
     //Förbättrar prestandan i animeringarna
     self.schemaShadowView.layer.shouldRasterize = YES;
+
     
 }
 
@@ -485,10 +480,8 @@
 -(void)setUpPlacesContainer
 {
     //Ställer in var containern till platslistan är någonstant. Sätter även rundade hörn å en border på containern så att den liknar schemalistan.
-    self.placesContainerView.layer.masksToBounds = YES;
-    self.placesContainerView.layer.cornerRadius = 10;
-    self.placesContainerView.layer.borderWidth = 0.1;
-    self.placesContainerView.layer.borderColor = [UIColor blackColor].CGColor;
+    // self.placesContainerView.layer.masksToBounds = YES;
+    //  self.placesContainerView.layer.cornerRadius = 10;
     
     self.placesContainerView.frame = CGRectMake(
                                                 schemaTableView.tableView.frame.origin.x,

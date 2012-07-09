@@ -29,6 +29,8 @@
 		5534BBCF159FB497009E9E8A /* RSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534BBCD159FB497009E9E8A /* RSSTableView.m */; };
 		55582351159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
 		55582352159E7EB30091D848 /* Umea_Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5558234F159E7EB30091D848 /* Umea_Student.xcdatamodeld */; };
+		5562980C15AB569700A7733F /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5562980B15AB569700A7733F /* bg.jpeg */; };
+		5562980D15AB569700A7733F /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5562980B15AB569700A7733F /* bg.jpeg */; };
 		557F63E8159E773B00A13BAA /* CheckInternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E3159E773B00A13BAA /* CheckInternetConnection.m */; };
 		557F63E9159E773B00A13BAA /* CheckInternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E3159E773B00A13BAA /* CheckInternetConnection.m */; };
 		557F63EA159E773B00A13BAA /* EventsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F63E4159E773B00A13BAA /* EventsTableView.m */; };
@@ -144,7 +146,6 @@
 		557F64AD159E78B400A13BAA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557F64AC159E78B400A13BAA /* CoreMotion.framework */; };
 		557F64B4159E798B00A13BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B3159E798B00A13BAA /* AppDelegate.m */; };
 		557F64B5159E798B00A13BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F64B3159E798B00A13BAA /* AppDelegate.m */; };
-		55B5225B15A3A046000E2A6D /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 55B5225A15A3A046000E2A6D /* bg.jpeg */; };
 		55E2083815A754DF005EF789 /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083715A754DF005EF789 /* SchedulesViewController.m */; };
 		55E2083915A754DF005EF789 /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083715A754DF005EF789 /* SchedulesViewController.m */; };
 		55E2083C15A75868005EF789 /* JSONSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E2083B15A75868005EF789 /* JSONSchema.m */; };
@@ -186,6 +187,7 @@
 		5534BBCC159FB497009E9E8A /* RSSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSTableView.h; sourceTree = "<group>"; };
 		5534BBCD159FB497009E9E8A /* RSSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSTableView.m; sourceTree = "<group>"; };
 		55582350159E7EB30091D848 /* Student_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student_App.xcdatamodel; sourceTree = "<group>"; };
+		5562980B15AB569700A7733F /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
 		557F63E3159E773B00A13BAA /* CheckInternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInternetConnection.m; sourceTree = "<group>"; };
 		557F63E4159E773B00A13BAA /* EventsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableView.m; sourceTree = "<group>"; };
 		557F63E5159E773B00A13BAA /* FetchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchRequest.m; sourceTree = "<group>"; };
@@ -270,7 +272,6 @@
 		557F64AC159E78B400A13BAA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		557F64B2159E797A00A13BAA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557F64B3159E798B00A13BAA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		55B5225A15A3A046000E2A6D /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
 		55E2083615A754DF005EF789 /* SchedulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulesViewController.h; sourceTree = "<group>"; };
 		55E2083715A754DF005EF789 /* SchedulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesViewController.m; sourceTree = "<group>"; };
 		55E2083A15A75868005EF789 /* JSONSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSchema.h; sourceTree = "<group>"; };
@@ -314,7 +315,6 @@
 		55247640159E74CC00084226 = {
 			isa = PBXGroup;
 			children = (
-				55B5225A15A3A046000E2A6D /* bg.jpeg */,
 				5534BBB6159F83B9009E9E8A /* ToFiX.rtf */,
 				557F6428159E776300A13BAA /* iPhone_Storyboard.storyboard */,
 				55247657159E74CC00084226 /* Umea Student */,
@@ -424,6 +424,7 @@
 			children = (
 				557F6430159E777B00A13BAA /* MainViewController.h */,
 				557F63F2159E774D00A13BAA /* MainViewController.m */,
+				5562980B15AB569700A7733F /* bg.jpeg */,
 				5534BBB5159F7F3A009E9E8A /* ViewsOnMainView */,
 			);
 			name = MainView;
@@ -668,9 +669,9 @@
 				557F6498159E77A200A13BAA /* security.png in Resources */,
 				557F649A159E77A200A13BAA /* webcam.png in Resources */,
 				5534BBB7159F83B9009E9E8A /* ToFiX.rtf in Resources */,
-				55B5225B15A3A046000E2A6D /* bg.jpeg in Resources */,
 				55E2083F15A850D6005EF789 /* backButton.png in Resources */,
 				552B537C15A86FB300090380 /* exit.png in Resources */,
+				5562980C15AB569700A7733F /* bg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +714,7 @@
 				5534BBB8159F83B9009E9E8A /* ToFiX.rtf in Resources */,
 				55E2084015A850D6005EF789 /* backButton.png in Resources */,
 				552B537D15A86FB300090380 /* exit.png in Resources */,
+				5562980D15AB569700A7733F /* bg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

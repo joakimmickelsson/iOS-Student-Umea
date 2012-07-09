@@ -17,6 +17,6 @@
 
 -(void)setupEventsTableView;
 
-
+@property(nonatomic,strong) IBOutlet UIWebView *webView;
 
 @end

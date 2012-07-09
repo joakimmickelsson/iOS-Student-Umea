@@ -19,11 +19,14 @@
 @synthesize webView;
 
 -(void)load:(NSString *)urlString{
+    self.webView.scrollView.bounces = NO;
+    self.webView.scalesPageToFit = YES;
     
     [webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: urlString]
                            
                                            cachePolicy: NSURLRequestReloadRevalidatingCacheData
                                        timeoutInterval: 60*60]];
+    
 
 }
 
@@ -36,6 +39,16 @@
 {
     NSLog(@"Finished Loading Student Info");
     
+    NSLog(@"zooming");
+    //zooms content to fit thw webview
+    if ([self.webView respondsToSelector:@selector(scrollView)])
+    {
+        UIScrollView *scroll=[self.webView scrollView];
+        
+        float zoom=self.webView.bounds.size.width/scroll.contentSize.width;
+        [scroll setZoomScale:zoom animated:YES];
+    }
+    
     }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
@@ -46,9 +59,9 @@
 }
 
 -(void)roundOfCorners{
-    self.webView.layer.cornerRadius = 10;
-    self.webView.layer.borderWidth = 0.1;
-    self.webView.layer.borderColor = [UIColor blackColor].CGColor;
+    // self.webView.layer.cornerRadius = 10;
+    //  self.webView.layer.borderWidth = 0.1;
+    // self.webView.layer.borderColor = [UIColor blackColor].CGColor;
     
 }
 

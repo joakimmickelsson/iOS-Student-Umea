@@ -311,7 +311,6 @@
     
     else {
         JSONSchema *schema  = [myNotStoredSchemasFromWebArray objectAtIndex:indexPath.row];
-        NSLog(@"rowschema%@",schema.kursnamn);
 
         for( JSONSchema *superschema in schemasFromWebArray){
             
@@ -332,20 +331,9 @@
             
         }
     }
-    
-    NSLog(@"schemasfromwebarray%@",schemasFromWebArray);
-    NSLog(@"stored%@",storedSchemasArray);
-    NSLog(@"mystored%@",myStoredSchemasFromWebArray);
-    NSLog(@"myNOTS%@",myNotStoredSchemasFromWebArray);
-
+   
     
     [self restoreDataSourceArrays];
-    
-    NSLog(@"schemasfromwebarray%@",schemasFromWebArray);
-    NSLog(@"stored%@",storedSchemasArray);
-    NSLog(@"mystored%@",myStoredSchemasFromWebArray);
-    NSLog(@"myNOTS%@",myNotStoredSchemasFromWebArray);
-
     [self.tableView reloadData ];
     
 }
